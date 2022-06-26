@@ -2,8 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Home } from './pages/Home';
-import bg from './img/bg.jpg';
+import bg from './resources/img/bg.jpg';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { NavBar } from './components/NavBar';
 
 const rootStyles = {
   background: {
@@ -20,6 +21,7 @@ function App() {
     <React.StrictMode>
         <BrowserRouter>
           <div style={rootStyles.background}>
+            <NavBar></NavBar>
             <Routes>
               <Route path="/" element={<Home />} />
             </Routes>

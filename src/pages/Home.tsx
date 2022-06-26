@@ -3,12 +3,18 @@ import Grid from "@mui/material/Grid/Grid";
 import { Hero } from "../components/Hero";
 import { StarryNightHero } from "../components/StarryNightHero";
 
+const styles = {
+    homeContainer : {
+        padding: "10px"
+    }
+}
+
 export const Home = () => {
     return (
-        <Grid container>
-            <Container maxWidth="xl">
+        <Container maxWidth="xl">
+            <Grid container style={styles.homeContainer}>
                 <Hero />
-            </Container>
-        </Grid>
+            </Grid>
+        </Container>
     );
 }
