@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url('./resources/font/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins Thin';
+  src: local('Poppins'), url('./resources/font/Poppins/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: local('Poppins Bold'), url('./resources/font/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
 }
