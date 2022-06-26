@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import bg from './resources/img/bg.jpg';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { NavBar } from './components/NavBar';
+import { Footer } from './components/Footer';
 
 const rootStyles = {
   background: {
@@ -25,6 +26,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
             </Routes>
+            <Footer></Footer>
           </div>
         </BrowserRouter>
     </React.StrictMode>
