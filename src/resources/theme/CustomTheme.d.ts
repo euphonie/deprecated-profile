@@ -42,7 +42,7 @@ export default createTheme({
         white: createColor('#fff'),
     },
     typography: {
-        fontFamily: ['Poppins', 'Roboto', 'Helvetica Neue', 'sans-serif'].join(
+        fontFamily: ['Poppins Light', 'Roboto', 'Helvetica Neue', 'sans-serif'].join(
             ','
         ),
     },

@@ -9,9 +9,32 @@
 }
 
 @font-face {
+  font-family: 'Poppins Light';
+  src: local('Poppins'), url('./resources/font/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Poppins Bold';
   src: local('Poppins Bold'), url('./resources/font/Poppins/Poppins-Bold.ttf') format('truetype');
   font-weight: bold;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .App {
