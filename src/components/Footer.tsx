@@ -9,6 +9,7 @@ import Animate from 'react-simple-animate/dist/animate';
 
 const bottomAppBar = {
     bottom: 0,
+    left: 0,
     top: "revert",
     width: "100%",
     padding: "10px"

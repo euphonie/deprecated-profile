@@ -62,12 +62,12 @@ export const Hero = () => {
                     >
                         <Link href={links.linkedin} target="_blank" style={{filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4))"}}>
                             <Button sx={{ float: 'right' }}>
-                                <LinkedInIcon color="white" fontSize="large" />
+                                <LinkedInIcon color="accent" fontSize="large" />
                             </Button>
                         </Link>
                         <Link href={links.gh} target="_blank" style={{filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4))"}}>
                             <Button sx={{ float: 'right' }}>
-                                <GitHubIcon color="white" fontSize="large" />
+                                <GitHubIcon color="accent" fontSize="large" />
                             </Button>
                         </Link>
                     </Animate>

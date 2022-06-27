@@ -87,8 +87,8 @@ export const NavBar = () => {
                             >
                             {
                                 pages.map((page) => (
-                                    <Link to={page.anchor} replace={true} style={{ textDecoration: 'none' }} >
-                                        <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                                    <Link key={page.title} to={page.anchor} replace={true} style={{ textDecoration: 'none' }} >
+                                        <MenuItem  onClick={handleCloseNavMenu}>
                                             <Typography textAlign="center" >{page.title}</Typography>
                                         </MenuItem>
                                     </Link>
@@ -99,9 +99,9 @@ export const NavBar = () => {
                         <Box sx={{ flexGrow: 1, display: { md: 'flex', xs: 'none' } }}>
                             {
                                 pages.map((page) => (
-                                    <Link to={page.anchor} replace={true} style={{ textDecoration: 'none' }}>
+                                    <Link key={page.title} to={page.anchor} replace={true} style={{ textDecoration: 'none' }}>
                                         <Button
-                                            key={page.title}
+                                            
                                             color="white"
                                             sx={{ my: 2, display: 'block' }}
                                         >
