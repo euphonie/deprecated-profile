@@ -1,4 +1,32 @@
 {
-    "title": "Hi, I'm Joel",
-    "subtitle": "Fullstack Software Developer and NLU enthusiast from Guatemala"
+    "menu": {
+        "experience": "Experience",
+        "work": "My Work",
+        "contact": "Contact",
+        "about": "About"
+    },
+    "landing": {
+        "title": "Hi, I'm Joel",
+        "subtitle": "Fullstack Software Developer and Computation Language Enthusiast from Guatemala",
+        "summary": "",
+        "cta":{
+            "contact": "Contact Me",
+            "work": "My work"
+        }
+    },
+    "contact": {
+        "title": "Want to work together or just say Hi?",
+        "content": "Let's start a conversation.",
+        "sentMessage": "Thanks! I will get back to you as soon as possible.",
+        "form": {
+            "email": "Email",
+            "message": "Message",
+            "name": "Name",
+            "messagePlaceholder": "Hey Joel, I wanted to talk to you about...",
+            "send": "Send"
+        }
+    },
+    "footer": {
+        "copyright": "© 2022 Joel Cantoral"
+    }
 }

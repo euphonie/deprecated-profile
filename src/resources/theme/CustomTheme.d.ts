@@ -59,6 +59,13 @@ export default createTheme({
         silver: createColor("#a7a2a9"),
         fadedPrimary: createColor("#323444", 0.6),
         white: createColor('#fff'),
+        // cards accents
+        accentRed: createColor('##F4442E'),
+        accentDarkBlue: createColor('#020122'),
+        accentTealBlue: createColor('#40798C'),
+        accentGreenSheen: createColor('#70A9A1'),
+        // contact pikachu - background green
+        contactAnimationGreenBackground: createColor('#4CAF50'),
         background: {
             default: "#E9B44C",
             paper: "#EBF2FA"
