@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box/Box";
 import IconButton from "@mui/material/IconButton/IconButton";
 import { Link } from "react-router-dom";
-import links from "../fixtures/links";
+import links from "../config/links";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GithubIcon from '@mui/icons-material/GitHub';
 import HackerrankIcon from './icons/HackerrankIcon';

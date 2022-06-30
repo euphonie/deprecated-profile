@@ -10,3 +10,10 @@ export type ContactFormState = {
     message: string;
     name: string;
 };
+
+export interface SkillChipData {
+    key: number;
+    label: string;
+    img: string;
+    yearsOfExperience: string;
+}
