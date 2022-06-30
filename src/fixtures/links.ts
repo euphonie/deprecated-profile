@@ -1,7 +1,5 @@
-const gh = "//github.com/euphonie";
-const linkedin = "//www.linkedin.com/in/cantoraljoel/";
-
 export default {
-    gh,
-    linkedin
+    gh: "//github.com/euphonie",
+    linkedin:  "//www.linkedin.com/in/cantoraljoel/",
+    hackerrank: "//www.hackerrank.com/cs_joel?hr_r=1"
 };

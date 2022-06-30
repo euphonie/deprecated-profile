@@ -7,33 +7,35 @@ import Toolbar from '@mui/material/Toolbar/Toolbar';
 import Menu from '@mui/material/Menu/Menu';
 import MenuItem from '@mui/material/MenuItem/MenuItem';
 import Typography from '@mui/material/Typography/Typography';
-import Button from '@mui/material/Button/Button';
 import theme from '../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import AppBar from '@mui/material/AppBar/AppBar';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import HomeIcon from '@mui/icons-material/Home';
+import { SocialIconBox } from './SocialIconBox';
 
 const pages = [
     {
-        'title': 'Experience',
-        'anchor': '/'
+        title: 'experience',
+        anchor: '/',
     },
     {
-        'title': 'Works/Experiments',
-        'anchor': '/'
+        title: 'work',
+        anchor: '/',
     },
     {
-        'title': 'About',
-        'anchor': '/'
+        title: 'about',
+        anchor: '/',
     },
     {
-        'title': 'Contact',
-        'anchor': '/contact'
-    }
+        title: 'contact',
+        anchor: '/contact',
+    },
 ];
 
 export const NavBar = () => {
-    let navigate = useNavigate();
+    const { t } = useTranslation();
 
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
         null
@@ -47,19 +49,39 @@ export const NavBar = () => {
         setAnchorElNav(null);
     };
 
-    const goTo = (anchor: string) => {    
-        navigate(anchor, { replace: true });
-    }
-
     return (
         <ThemeProvider theme={theme}>
-            <AppBar color="fadedPrimary" position="sticky">
+            <AppBar
+                color={
+                    window.location.pathname === '/contact'
+                        ? 'primary'
+                        : 'fadedPrimary'
+                }
+                position="sticky"
+            >
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'left'
+                            }}
+                        >
+                            <Link to="/">
+                                <IconButton size="large" color="white">
+                                    <HomeIcon />
+                                </IconButton>
+                            </Link>
+                        </Box>
+                        <Box
+                            sx={{
+                                flexGrow: 1,
+                                display: { xs: 'flex', md: 'none' },
+                            }}
+                        >
                             <IconButton
                                 size="large"
-                                aria-label="account of current user"
+                                aria-label="menu options"
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
                                 onClick={handleOpenNavMenu}
@@ -85,32 +107,44 @@ export const NavBar = () => {
                                     display: { xs: 'block', md: 'none' },
                                 }}
                             >
-                            {
-                                pages.map((page) => (
-                                    <Link to={page.anchor} replace={true} style={{ textDecoration: 'none' }} >
-                                        <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center" >{page.title}</Typography>
+                                {pages.map((page) => (
+                                    <Link
+                                        key={page.title}
+                                        to={page.anchor}
+                                        replace={true}
+                                        style={{ textDecoration: 'none', color: 'primary' }}
+                                    >
+                                        <MenuItem onClick={handleCloseNavMenu}>
+                                            <Typography textAlign="center">
+                                                {t(`menu.${page.title}`)}
+                                            </Typography>
                                         </MenuItem>
                                     </Link>
-                                ))
-                            }
+                                ))}
                             </Menu>
                         </Box>
-                        <Box sx={{ flexGrow: 1, display: { md: 'flex', xs: 'none' } }}>
-                            {
-                                pages.map((page) => (
-                                    <Link to={page.anchor} replace={true} style={{ textDecoration: 'none' }}>
-                                        <Button
-                                            key={page.title}
-                                            color="white"
-                                            sx={{ my: 2, display: 'block' }}
-                                        >
-                                            {page.title}
-                                        </Button>
-                                    </Link>
-                                ))
-                            }
+                        <Box
+                            sx={{
+                                flexGrow: 1,
+                                display: { md: 'flex', xs: 'none' },
+                            }}
+                        >
+                            {pages.map((page) => (
+                                <Link
+                                    key={page.title}
+                                    to={page.anchor}
+                                    replace={true}
+                                    style={{ textDecoration: 'none',  color:"white" }}
+                                >
+                                    <MenuItem>
+                                        <Typography>
+                                            {t(`menu.${page.title}`)}
+                                        </Typography>
+                                    </MenuItem>
+                                </Link>
+                            ))}
                         </Box>
+                        <SocialIconBox />
                     </Toolbar>
                 </Container>
             </AppBar>
