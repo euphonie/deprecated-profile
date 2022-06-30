@@ -4,6 +4,7 @@ import ExperienceTimeline from "../components/ExperienceTimeline";
 export default () => {
     return(
         <Container disableGutters>
+          <ExperienceTimeline />
         </Container>
     );
 }
