@@ -1,38 +1,42 @@
 
 import AppBar from '@mui/material/AppBar/AppBar';
-import Container from '@mui/material/Container/Container';
 import theme from '../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import Toolbar from '@mui/material/Toolbar/Toolbar';
 import MadeInGTIcon from '../resources/img/madeingt.png';
-import Animate from 'react-simple-animate/dist/animate';
+import { AnimateWhenVisible } from './animations/AnimateWhenVisible';
+import Typography from '@mui/material/Typography/Typography';
+import MenuItem from '@mui/material/MenuItem/MenuItem';
+import { useTranslation } from 'react-i18next';
+import { SocialIconBox } from './SocialIconBox';
 
 const bottomAppBar = {
+    top: "auto",
     bottom: 0,
     left: 0,
-    top: "revert",
     width: "100%",
     padding: "10px"
 };
 
-export const Footer = () => {
+export const Footer = ({showSocial}: {showSocial: boolean}) => {
+    const { t } = useTranslation();
+    
     return (
         <ThemeProvider theme={theme}>
-            <AppBar color="secondary" position='fixed' style={bottomAppBar}>
-                <Animate
-                    play={true}
-                    duration={1}
-                    delay={0.3}
-                    start={{ opacity: 0, transform: "translateY(25px)" }}
-                    end={{ opacity: 1, transform: "translateY(0)" }}
-                    easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-                >
-                    <Container maxWidth="xs">
-                        <Toolbar disableGutters sx={{ justifyContent: "center" }}>
-                            <img src={MadeInGTIcon} style={{height: "60px"}} alt="madeinguatemala"/>
-                        </Toolbar>
-                    </Container>
-                </Animate>
+            <AppBar color="secondary" position={window.location.pathname === "/contact" ? "fixed" : "relative"} style={bottomAppBar}>
+                <AnimateWhenVisible animation="fadeTop">
+                    <Toolbar sx={{ display: 'flex', width: "100%", padding: "10px", justifyContent: 'space-around' }} >
+                        <img src={MadeInGTIcon} style={{height: "60px"}} alt="madeinguatemala"/>
+                        <div style={{display: showSocial ? 'block' : 'none'}}> 
+                            <SocialIconBox />
+                        </div>
+                        <MenuItem>
+                            <Typography variant="body2">
+                                { t("footer.copyright") }
+                            </Typography>
+                        </MenuItem>
+                    </Toolbar>
+                </AnimateWhenVisible>
             </AppBar>
         </ThemeProvider>
     );

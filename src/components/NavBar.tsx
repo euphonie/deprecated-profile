@@ -12,6 +12,7 @@ import theme from '../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import AppBar from '@mui/material/AppBar/AppBar';
 import { Link, useNavigate } from 'react-router-dom';
+import { SocialIconBox } from './SocialIconBox';
 
 const pages = [
     {
@@ -111,6 +112,7 @@ export const NavBar = () => {
                                 ))
                             }
                         </Box>
+                        <SocialIconBox />
                     </Toolbar>
                 </Container>
             </AppBar>
