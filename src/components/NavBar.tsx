@@ -17,18 +17,22 @@ import { SocialIconBox } from './SocialIconBox';
 
 const pages = [
     {
+        key: 0,
         title: 'experience',
         anchor: '/',
     },
     {
+        key: 1,
         title: 'work',
         anchor: '/',
     },
     {
+        key: 2,
         title: 'about',
         anchor: '/',
     },
     {
+        key: 3,
         title: 'contact',
         anchor: '/contact',
     },

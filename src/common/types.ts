@@ -13,7 +13,8 @@ export type ContactFormState = {
 
 export interface SkillChipData {
     key: number;
-    label: string;
+    tech: string;
     img: string;
-    yearsOfExperience: string;
+    confidenceLevel: string;
+    yearsOfExperience: number;
 }

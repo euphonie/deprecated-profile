@@ -16,7 +16,7 @@ export default function CustomizedTimeline() {
     return (
         <Timeline position="alternate">
             <Typography sx={{ textAlign: 'center' }} variant="h5">
-                Skills summary
+                Tech Journey
             </Typography>
             <TimelineItem>
                 <TimelineOppositeContent
