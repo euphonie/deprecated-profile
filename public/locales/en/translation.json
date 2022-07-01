@@ -26,6 +26,13 @@
             "send": "Send"
         }
     },
+    "mywork": {
+        "journey": {
+            "title": "Tech Journey",
+            "team": "Teams",
+            "responsabilities": "Main responsabilities"
+        }
+    },
     "footer": {
         "copyright": "© 2022 Joel Cantoral"
     }

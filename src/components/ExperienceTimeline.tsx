@@ -7,92 +7,76 @@ import TimelineContent from '@mui/lab/TimelineContent/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot/TimelineDot';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
+import EngineeringIcon from '@mui/icons-material/Engineering';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
+import BusinessIcon from'@mui/icons-material/Business';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import WorkspacesIcon from '@mui/icons-material/Workspaces';
 import Typography from '@mui/material/Typography';
+import mywork from '../config/mywork.json';
+import { useTranslation } from 'react-i18next';
+import { parentPort } from 'worker_threads';
+import ListItemButton from '@mui/material/ListItemButton/ListItemButton';
+import ListItemText from '@mui/material/ListItemText/ListItemText';
+import ListItem from '@mui/material/ListItem/ListItem';
 
-export default function CustomizedTimeline() {
+export default function ExperienceTimeline() {
+    const { t } = useTranslation();
+
     return (
         <Timeline position="alternate">
             <Typography sx={{ textAlign: 'center' }} variant="h5">
-                Tech Journey
+                {t('mywork.journey.title')}
             </Typography>
-            <TimelineItem>
-                <TimelineOppositeContent
-                    sx={{ m: 'auto 0' }}
-                    align="right"
-                    variant="body2"
-                    color="text.secondary"
-                >
-                    9:30 am
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                    <TimelineConnector />
-                    <TimelineDot>
-                        <FastfoodIcon />
-                    </TimelineDot>
-                    <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                    <Typography variant="h6" component="span">
-                        Eat
-                    </Typography>
-                    <Typography>Because you need strength</Typography>
-                </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-                <TimelineOppositeContent
-                    sx={{ m: 'auto 0' }}
-                    variant="body2"
-                    color="text.secondary"
-                >
-                    10:00 am
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                    <TimelineConnector />
-                    <TimelineDot color="primary">
-                        <LaptopMacIcon />
-                    </TimelineDot>
-                    <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                    <Typography variant="h6" component="span">
-                        Code
-                    </Typography>
-                    <Typography>Because it&apos;s awesome!</Typography>
-                </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-                <TimelineSeparator>
-                    <TimelineConnector />
-                    <TimelineDot color="primary" variant="outlined">
-                        <HotelIcon />
-                    </TimelineDot>
-                    <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                    <Typography variant="h6" component="span">
-                        Sleep
-                    </Typography>
-                    <Typography>Because you need rest</Typography>
-                </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-                <TimelineSeparator>
-                    <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-                    <TimelineDot color="secondary">
-                        <RepeatIcon />
-                    </TimelineDot>
-                    <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                    <Typography variant="h6" component="span">
-                        Repeat
-                    </Typography>
-                    <Typography>Because this is the life you love!</Typography>
-                </TimelineContent>
-            </TimelineItem>
+            {
+              mywork.work.map((position, i) => {
+                return (
+                  <TimelineItem>
+                    <TimelineOppositeContent
+                        sx={{ m: 'auto 0' }}
+                        variant="body2"
+                        color="text.secondary"
+                    >
+                        { `${position.startDate} - ${position.endDate}` }
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                        <TimelineConnector />
+                        <TimelineDot color="primary">
+                            <FastfoodIcon />
+                        </TimelineDot>
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent sx={{ py: '12px', px: 2, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                        <Typography textAlign="left" variant="h6" component="span" sx={{display: 'flex', gap:'0.8rem', alignItems: 'center'}}>
+                            <EngineeringIcon />
+                            {position.position}
+                        </Typography>
+                        <Typography textAlign="left" variant="body2" component="span" sx={{display: 'flex', gap:'0.8rem', alignItems: 'center'}}>
+                          <BusinessIcon />
+                          {position.company}
+                        </Typography>
+                        <Typography textAlign="left" variant="body2" component="span"  sx={{display: 'flex', gap:'0.8rem', alignItems: 'center'}}>
+                          <WorkspacesIcon />
+                            {`${t('mywork.journey.team')}: ${position.team}`}
+                        </Typography>
+                        <Typography  textAlign="left" variant="h6" component="span"  sx={{display: 'flex', gap:'0.8rem', alignItems: 'center'}}>
+                          <AssignmentIcon />
+                          {t('mywork.journey.responsabilities')}
+                        </Typography>
+                        <Typography variant="caption" component="span" sx={{display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                          {
+                            position.responsabilities.map((task: string) => {
+                              return (
+                                  <span>{task}</span>
+                              );
+                            })
+                          }
+                        </Typography>
+                    </TimelineContent>
+                </TimelineItem>
+                );
+              })
+            }
         </Timeline>
     );
 }

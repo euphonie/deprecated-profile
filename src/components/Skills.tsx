@@ -61,7 +61,7 @@ export default () => {
                                                 color="secondary"
                                                 sx={{display: 'flex', gap: '1rem'}}
                                             >
-                                                <Typography variant="body2">
+                                                <Typography variant="caption">
                                                     {data.tech}
                                                 </Typography>
                                                 <Chip color="warning" label={data.yearsOfExperience}></Chip>

@@ -542,8 +542,18 @@
     ],
     "work": [
         {
+            "key": 1,
             "position": "Senior Sofware Developer",
             "company": "Grupo TIR, S. A.",
+            "team": "Software Development Team, Internal and External Clients",
+            "responsabilities": [
+                "Low level architecture design",
+                "DB design",
+                "Implementation, Testing and Support",
+                "Provide project updates",
+                "Provide help to other team members",
+                "Communication with Business Analysts and Management"
+            ],
             "startDate": "2013-12-01T00:00:00Z",
             "endDate": "2016-02-01T00:00:00Z",
             "projects": [
@@ -595,8 +605,17 @@
             ]
         },
         {
+            "key": 2,
             "position": "Software Development Team Lead",
             "company": "Grupo TIR, S. A.",
+            "team": "Software Development Team, New Products Team",
+            "responsabilities": [
+                "High level systems design",
+                "Requirements Elicitation",
+                "Provide project status and next steps",
+                "Mentoring",
+                "Communication with Business Analysts, Management and Direction"
+            ],
             "startDate": "2016-02-01T00:00:00Z",
             "endDate": "2019-12-01T00:00:00Z",
             "projects": [
@@ -639,8 +658,16 @@
             ]
         },
         {
+            "key": 3,
             "position": "Fullstack Software Developer",
             "company": "Telus International - Central America",
+            "responsabilities": [
+                "Low level architecture design",
+                "Requirements translation",
+                "Provide help to other team members",
+                "Communication with Business Analysts and Management"
+            ],
+            "team": "GIS Client Team, Subject Matter Expert Group",
             "startDate": "2020-01-01T00:00:00Z",
             "endDate": "2022-03-01T00:00:00Z",
             "projects": [
@@ -725,8 +752,16 @@
             ]
         },
         {
+            "key": 4,
             "position": "Backend Software Engineer",
             "company": "Healthcare.com",
+            "team": "Marketing & Communications Team",
+            "responsabilities": [
+                "Low level architecture design",
+                "Requirements translation",
+                "Provide help to other team members",
+                "Communication with Business Analysts and Management"
+            ],
             "startDate": "2022-03-01T00:00:00Z",
             "endDate": "2022-06-01T00:00:00Z",
             "projects": [
