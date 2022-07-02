@@ -2,124 +2,39 @@
     "work": [
         {
             "key": 1,
-            "position": "Senior Sofware Developer",
-            "company": "Grupo TIR, S. A.",
-            "team": "Software Development Team, Internal and External Clients",
+            "position": "Backend Software Engineer",
+            "company": "Healthcare.com",
+            "team": "Marketing & Communications Team",
             "icon": "developer",
             "responsabilities": [
                 "Low level architecture design",
-                "DB design",
-                "Implementation, Testing and Support",
-                "Provide project updates",
+                "Requirements translation",
                 "Provide help to other team members",
                 "Communication with Business Analysts and Management"
             ],
-            "startDate": "2013-12-01T00:00:00Z",
-            "endDate": "2016-02-28T00:00:00Z",
+            "startDate": "2022-03-16T00:00:00Z",
+            "endDate": "2022-06-30T00:00:00Z",
             "projects": [
                 {
-                    "name": "Service Payment Middleware",
-                    "description": "Build a middleware to support service payments between a fintech application owned by a major telecommunications company and online banking systems.",
-                    "startDate": "2013-01-01T00:00:00Z",
-                    "endDate": "2014-12-01T00:00:00Z",
-                    "outcome": "The integration was completed successfully, communicating both parties and enabling a portfolio of 8 main service providers having a regular userbase of thousands of users at country-level.\n To communicate both systems RabbitMQ was used as a Persistance/Queue/Message Handling interface.",
+                    "name": "Instrumentation - Marketing middleware",
+                    "startDate": "2022-03-16:00:00Z",
+                    "endDate": "2022-06-30T00:00:00Z",
+                    "description": "Instrument current marketing data middleware using Java/Kotlin/Spring boot and expose metrics in a dashboard using Grafana. Connect dashboard with Opsgenie alert system to provide real-time notifications.",
+                    "outcome": "Add support to metrics middleware to integrate with different metric collectors (statsd/datadog). Migrate company-wide github action that collected code coverage metrics from datadog to grafana. Github action built using Python and metrics middleware using Java/ Spring Boot. Implementation of dashboard gave visibility on service bottlenecks and areas of improvement of current middleware project. I conducted a series of meetings describing the implementation as it was one of the first dashboards implemented company-wide.",
                     "techStack": [
                         "Java",
-                        "API Design",
-                        "Webservice",
-                        "MS SQL Server",
-                        "Git",
-                        "Gitlab",
-                        "RabbitMQ"
-                    ]
-                },
-                {
-                    "name": "Electronic Product Gateway - Backoffice",
-                    "description": "Build a backoffice to give support to buyers of electronic top-ups products sell by one of the main telecommunications providers in the country. Provide tools for customer service to respond to queries and generate reports to share with the client.",
-                    "startDate": "2013-12-01T00:00:00Z",
-                    "endDate": "2016-02-01T00:00:00Z",
-                    "outcome": "Provided real-time service to users in Central America and the US. Attended a userbase of tens of thousands of top-up purchases daily with a customer service of 4 operators.",
-                    "techStack": [
-                        "PHP",
-                        "jQuery",
-                        "Bootstrap",
-                        "Yii 2 Framework",
-                        "MS SQL Server",
-                        "Git",
-                        "Gitlab"
-                    ]
-                },
-                {
-                    "name": "SMS Middleware",
-                    "startDate": "2015-06-01T00:00:00Z",
-                    "endDate": "2015-09-01T00:00:00Z",
-                    "description": "Design and development of a SMS broker to deliver messages through one of the main telecommunications provider's SMPP network. Admin page built using AngularJS. ",
-                    "outcome": "Project built using Python/Tornado Server as the middleware to received and processed SMS messages. Persistance and handling of messages was implemented using MS SQL Server.",
-                    "techStack": [
-                        "Python",
-                        "MS SQL Server",
-                        "Tornado Server",
-                        "AngularJS"
+                        "Github",
+                        "Grafana",
+                        "Kotlin Spring Boot",
+                        "AWS",
+                        "StatsD",
+                        "Python"
                     ]
                 }
             ]
         },
         {
             "key": 2,
-            "position": "Software Development Team Lead",
-            "company": "Grupo TIR, S. A.",
-            "team": "Software Development Team, New Products Team",
-            "icon": "leadership",
-            "responsabilities": [
-                "High level systems design",
-                "Requirements Elicitation",
-                "Provide project status and next steps",
-                "Mentoring",
-                "Communication with Business Analysts, Management and Direction"
-            ],
-            "startDate": "2016-03-01T00:00:00Z",
-            "endDate": "2019-12-31T00:00:00Z",
-            "projects": [
-                {
-                    "name": "B2B Marketing Data Capture",
-                    "startDate": "2016-02-01T00:00:00Z",
-                    "endDate": "2019-12-01T00:00:00Z",
-                    "description": "Capture marketing insights of small distributors country-wide. Build a database of marketing trends of main products sell by companies in the retail/consumer industry.",
-                    "outcome": "A native android app was built to capture the insights through surveys and keep track of surveyors. The app allowed having multiple roles/permissions to have operators, supervisors and administrators. The backend was built using Java and MySQL.\n The captured data was ingested into ArcGIS and dashboards were built using MySQL and Tableau.\n In a second version of the project, the backend and application was migrated to use entirely ArcGIS to have complete compatibility with the client's infrastructure.",
-                    "techStack": [
-                        "Java",
-                        "Android",
-                        "MySQL",
-                        "Tableau",
-                        "Android Studio"
-                    ]
-                },
-                {
-                    "name": "BTL Operations Front/Back office",
-                    "startDate": "2017-05-01T00:00:00Z",
-                    "endDate": "2018-05-01T00:00:00Z",
-                    "description": "Track BTL marketing operations from one of the main telecommunications provider in the country. Track and provide insights on marketing efforts at point of sale's level. ",
-                    "outcome": "Project was implemented in two solutions. A native android app to keep track of every BTL operator visiting each distributor, survey-capturing to build personalized dashboards and insights and route creation and assignment.\n Front office was built using AngularJS and connected to the main database in MySQL ",
-                    "techStack": [
-                        "Java",
-                        "Kotlin",
-                        "Android",
-                        "MySQL",
-                        "AngularJS"
-                    ]
-                },
-                {
-                    "name": "B2B E-Commerce Marketplace - Alchilazo",
-                    "startDate": "2018-05-01T00:00:00Z",
-                    "endDate": "2019-05-01T00:00:00Z",
-                    "description": "Provide a marketplace platform with a catalog of products from one of the main telecommunications provider in the country. The users were distributions centers in all the regions where the telecom was present. ",
-                    "outcome": "The e-commerce solution was bootstrapped using OpenCart and became an important sales channel for physical products (smartphones, tablets, satellite wifi hardware and others). The most outstanding features of the product included: Recommendations, similar products, inbound marketing for new products and restocked products. Sales push via email based on previous purchases when inventory was running low, this was possible as inventory of each distribution center was connected to the platform. Supported mobile access through responsive design. ",
-                    "techStack": ["PHP", "OpenCart", "Bootstrap", "MySQL"]
-                }
-            ]
-        },
-        {
-            "key": 3,
             "position": "Fullstack Software Developer",
             "company": "Telus International - Central America",
             "icon": "developer",
@@ -213,50 +128,122 @@
                 }
             ]
         },
+
         {
-            "key": 4,
-            "position": "Backend Software Engineer",
-            "company": "Healthcare.com",
-            "team": "Marketing & Communications Team",
-            "icon": "developer",
+            "key": 3,
+            "position": "Software Development Team Lead",
+            "company": "Grupo TIR, S. A.",
+            "team": "Software Development Team, New Products Team",
+            "icon": "leadership",
             "responsabilities": [
-                "Low level architecture design",
-                "Requirements translation",
-                "Provide help to other team members",
-                "Communication with Business Analysts and Management"
+                "High level systems design",
+                "Requirements Elicitation",
+                "Provide project status and next steps",
+                "Mentoring",
+                "Communication with Business Analysts, Management and Direction"
             ],
-            "startDate": "2022-03-16T00:00:00Z",
-            "endDate": "2022-06-30T00:00:00Z",
+            "startDate": "2016-03-01T00:00:00Z",
+            "endDate": "2019-12-31T00:00:00Z",
             "projects": [
                 {
-                    "name": "Instrumentation - Marketing middleware",
-                    "startDate": "2022-03-01T00:00:00Z",
-                    "endDate": "2022-04-01T00:00:00Z",
-                    "description": "Instrument current marketing data middleware using Java/Kotlin/Spring boot and expose metrics in a dashboard using Grafana. Connect dashboard with Opsgenie alert system to provide real-time notifications.",
-                    "outcome": "Implementation of dashboard gave visibility on service bottlenecks and areas of improvement of current middleware project. I conducted a series of meetings describing the implementation as it was one of the first dashboards implemented company-wide.",
+                    "name": "B2B Marketing Data Capture",
+                    "startDate": "2016-02-01T00:00:00Z",
+                    "endDate": "2019-12-01T00:00:00Z",
+                    "description": "Capture marketing insights of small distributors country-wide. Build a database of marketing trends of main products sell by companies in the retail/consumer industry.",
+                    "outcome": "A native android app was built to capture the insights through surveys and keep track of surveyors. The app allowed having multiple roles/permissions to have operators, supervisors and administrators. The backend was built using Java and MySQL.\n The captured data was ingested into ArcGIS and dashboards were built using MySQL and Tableau.\n In a second version of the project, the backend and application was migrated to use entirely ArcGIS to have complete compatibility with the client's infrastructure.",
                     "techStack": [
                         "Java",
-                        "Github",
-                        "Grafana",
-                        "Kotlin Spring Boot",
-                        "AWS",
-                        "Spring"
+                        "Android",
+                        "MySQL",
+                        "Tableau",
+                        "Android Studio"
                     ]
                 },
                 {
-                    "name": "Enhancements Metrics Middleware",
-                    "startDate": "2022-04-01T00:00:00Z",
-                    "endDate": "2022-06-01T00:00:00Z",
-                    "description": "Add support to metrics middleware to integrate with different metric collectors (statsd/datadog). Migrate company-wide github action that collected code coverage metrics from datadog to grafana. Github action built using Python and metrics middleware using Java/ Spring Boot",
-                    "outcome": "Support was implemented and deployed without issues, changes made an impact company-wide. I became point of contact regarding questions on this implementation.",
+                    "name": "BTL Operations Front/Back office",
+                    "startDate": "2017-05-01T00:00:00Z",
+                    "endDate": "2018-05-01T00:00:00Z",
+                    "description": "Track BTL marketing operations from one of the main telecommunications provider in the country. Track and provide insights on marketing efforts at point of sale's level. ",
+                    "outcome": "Project was implemented in two solutions. A native android app to keep track of every BTL operator visiting each distributor, survey-capturing to build personalized dashboards and insights and route creation and assignment.\n Front office was built using AngularJS and connected to the main database in MySQL ",
                     "techStack": [
                         "Java",
-                        "Github",
-                        "Grafana",
-                        "Kotlin Spring Boot",
-                        "StatsD",
+                        "Kotlin",
+                        "Android",
+                        "MySQL",
+                        "AngularJS"
+                    ]
+                },
+                {
+                    "name": "B2B E-Commerce Marketplace - Alchilazo",
+                    "startDate": "2018-05-01T00:00:00Z",
+                    "endDate": "2019-05-01T00:00:00Z",
+                    "description": "Provide a marketplace platform with a catalog of products from one of the main telecommunications provider in the country. The users were distributions centers in all the regions where the telecom was present. ",
+                    "outcome": "The e-commerce solution was bootstrapped using OpenCart and became an important sales channel for physical products (smartphones, tablets, satellite wifi hardware and others). The most outstanding features of the product included: Recommendations, similar products, inbound marketing for new products and restocked products. Sales push via email based on previous purchases when inventory was running low, this was possible as inventory of each distribution center was connected to the platform. Supported mobile access through responsive design. ",
+                    "techStack": ["PHP", "OpenCart", "Bootstrap", "MySQL"]
+                }
+            ]
+        },
+
+        {
+            "key": 4,
+            "position": "Senior Sofware Developer",
+            "company": "Grupo TIR, S. A.",
+            "team": "Software Development Team, Internal and External Clients",
+            "icon": "developer",
+            "responsabilities": [
+                "Low level architecture design",
+                "DB design",
+                "Implementation, Testing and Support",
+                "Provide project updates",
+                "Provide help to other team members",
+                "Communication with Business Analysts and Management"
+            ],
+            "startDate": "2013-12-01T00:00:00Z",
+            "endDate": "2016-02-28T00:00:00Z",
+            "projects": [
+                {
+                    "name": "Service Payment Middleware",
+                    "description": "Build a middleware to support service payments between a fintech application owned by a major telecommunications company and online banking systems.",
+                    "startDate": "2013-01-01T00:00:00Z",
+                    "endDate": "2014-12-01T00:00:00Z",
+                    "outcome": "The integration was completed successfully, communicating both parties and enabling a portfolio of 8 main service providers having a regular userbase of thousands of users at country-level.\n To communicate both systems RabbitMQ was used as a Persistance/Queue/Message Handling interface.",
+                    "techStack": [
+                        "Java",
+                        "API Design",
+                        "Webservice",
+                        "MS SQL Server",
+                        "Git",
+                        "Gitlab",
+                        "RabbitMQ"
+                    ]
+                },
+                {
+                    "name": "Electronic Product Gateway - Backoffice",
+                    "description": "Build a backoffice to give support to buyers of electronic top-ups products sell by one of the main telecommunications providers in the country. Provide tools for customer service to respond to queries and generate reports to share with the client.",
+                    "startDate": "2013-12-01T00:00:00Z",
+                    "endDate": "2016-02-01T00:00:00Z",
+                    "outcome": "Provided real-time service to users in Central America and the US. Attended a userbase of tens of thousands of top-up purchases daily with a customer service of 4 operators.",
+                    "techStack": [
+                        "PHP",
+                        "jQuery",
+                        "Bootstrap",
+                        "Yii 2 Framework",
+                        "MS SQL Server",
+                        "Git",
+                        "Gitlab"
+                    ]
+                },
+                {
+                    "name": "SMS Middleware",
+                    "startDate": "2015-06-01T00:00:00Z",
+                    "endDate": "2015-09-01T00:00:00Z",
+                    "description": "Design and development of a SMS broker to deliver messages through one of the main telecommunications provider's SMPP network. Admin page built using AngularJS. ",
+                    "outcome": "Project built using Python/Tornado Server as the middleware to received and processed SMS messages. Persistance and handling of messages was implemented using MS SQL Server.",
+                    "techStack": [
                         "Python",
-                        "Spring"
+                        "MS SQL Server",
+                        "Tornado Server",
+                        "AngularJS"
                     ]
                 }
             ]

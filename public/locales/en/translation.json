@@ -28,10 +28,13 @@
     },
     "mywork": {
         "journey": {
-            "title": "Tech Journey",
+            "title": "Experience (Tech Journey)",
             "team": "Teams",
             "responsabilities": "Main responsabilities"
         }
+    },
+    "projects": {
+        "title": "Projects"
     },
     "footer": {
         "copyright": "© 2022 Joel Cantoral"
