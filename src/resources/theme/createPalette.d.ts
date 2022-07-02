@@ -4,10 +4,12 @@ declare module "@mui/material/styles/createPalette" {
         fadedPrimary: PaletteColor;
         white: PaletteColor;
         contactAnimationGreenBackground: PaletteColor;
+        accentGreenSheen: PaletteColor;
     }
     interface PaletteOptions {
         fadedPrimary: PaletteColorOptions;
         white: PaletteColorOptions;
         contactAnimationGreenBackground: PaletteColorOptions;
+        accentGreenSheen: PaletteColorOptions;
     }
 }
