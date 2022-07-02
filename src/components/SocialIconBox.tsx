@@ -5,6 +5,7 @@ import links from "../config/links";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GithubIcon from '@mui/icons-material/GitHub';
 import HackerrankIcon from './icons/HackerrankIcon';
+import BehanceIcon from './icons/BehanceIcon';
 
 export const SocialIconBox = () => {
     return(
@@ -23,6 +24,11 @@ export const SocialIconBox = () => {
             <Link to={links.gh} target="_blank">
                 <IconButton size="large" color="white">
                     <GithubIcon />
+                </IconButton>
+            </Link>
+            <Link to={links.behance} target="_blank">
+                <IconButton size="large" color="white">
+                    <BehanceIcon />
                 </IconButton>
             </Link>
             <Link to={links.hackerrank} target="_blank">

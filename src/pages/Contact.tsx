@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { Footer } from '../components/Footer';
 import ContactForm from '../components/forms/ContactForm';
 import theme from '../resources/theme/CustomTheme.d';
+import stackedBG from '../resources/img/stacked-waves-haikei.svg';
 
 import { db } from '../config/firebase';
 import {
@@ -84,7 +85,7 @@ export const Contact = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <Box paddingBottom="100px">
+            <Box paddingBottom="15rem" sx={{backgroundImage: `url(${stackedBG})`, backgroundSize: 'cover'}}>
                 <Snackbar
                     anchorOrigin={{ vertical, horizontal }}
                     open={open}
