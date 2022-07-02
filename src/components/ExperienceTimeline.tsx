@@ -1,8 +1,6 @@
-import * as React from 'react';
 import Timeline from '@mui/lab/Timeline/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot/TimelineDot';
@@ -10,7 +8,6 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import BusinessIcon from '@mui/icons-material/Business';
-import AssignmentIcon from '@mui/icons-material/Assignment';
 import WorkspacesIcon from '@mui/icons-material/Workspaces';
 import Typography from '@mui/material/Typography';
 import mywork from '../config/mywork.json';
@@ -19,9 +16,10 @@ import moment from 'moment';
 import Box from '@mui/material/Box/Box';
 import theme from '../resources/theme/CustomTheme.d';
 import Paper from '@mui/material/Paper/Paper';
-import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
-import Button from '@mui/material/Button/Button';
 import { AnimateWhenVisible } from './animations/AnimateWhenVisible';
+import { ProjectsBox } from './experience/ProjectsBox';
+import { Job } from '../common/types';
+import { ResponsabilitiesBox } from './experience/ResponsabilitiesBox';
 
 export default function ExperienceTimeline() {
     const { t } = useTranslation();
@@ -32,9 +30,9 @@ export default function ExperienceTimeline() {
                 {t('mywork.journey.title')}
             </Typography>
             <Box m={2}>
-                {mywork.work.map((position, i: number) => {
-                    const sDate = moment(position.startDate);
-                    const eDate = moment(position.endDate);
+                {mywork.work.map((job: Job, i: number) => {
+                    const sDate = moment(job.startDate);
+                    const eDate = moment(job.endDate);
                     const monthDuration = eDate.diff(sDate, 'months') % 12;
                     const yearDuration = eDate.diff(sDate, 'years');
 
@@ -46,6 +44,7 @@ export default function ExperienceTimeline() {
                                     m: 'auto 0',
                                     display: 'flex',
                                     flexDirection: 'column',
+                                    fontWeight: '600'
                                 }}
                                 variant="h6"
                                 color="text.secondary"
@@ -60,7 +59,7 @@ export default function ExperienceTimeline() {
                                     color="primary"
                                     sx={{ borderRadius: '2px' }}
                                 >
-                                    {position.icon == 'leadership' ? (
+                                    {job.icon == 'leadership' ? (
                                         <PersonOutlineIcon />
                                     ) : (
                                         <LaptopMacIcon />
@@ -70,10 +69,7 @@ export default function ExperienceTimeline() {
                             <TimelineContent
                                 sx={{
                                     py: '12px',
-                                    px: 2,
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    gap: '1rem',
+                                    px: 2
                                 }}
                             >
                                 <AnimateWhenVisible animation="fadeTop">
@@ -86,11 +82,14 @@ export default function ExperienceTimeline() {
                                             color: theme.palette.white.main,
                                             borderColor: 'secondary',
                                             borderStyle: 'solid',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '1rem'
                                         }}
                                     >
                                         <Typography
                                             textAlign="left"
-                                            variant="h6"
+                                            variant="h5"
                                             component="span"
                                             sx={{
                                                 display: 'flex',
@@ -99,7 +98,7 @@ export default function ExperienceTimeline() {
                                             }}
                                         >
                                             <EngineeringIcon color="secondary" />
-                                            {position.position}
+                                            {job.position}
                                         </Typography>
                                         <Typography
                                             textAlign="left"
@@ -112,7 +111,7 @@ export default function ExperienceTimeline() {
                                             }}
                                         >
                                             <BusinessIcon color="secondary" />
-                                            {position.company}
+                                            {job.company}
                                         </Typography>
                                         <Typography
                                             textAlign="left"
@@ -126,52 +125,11 @@ export default function ExperienceTimeline() {
                                         >
                                             <WorkspacesIcon color="secondary" />
                                             {`${t('mywork.journey.team')}: ${
-                                                position.team
+                                                job.team
                                             }`}
                                         </Typography>
-                                        <Typography
-                                            textAlign="left"
-                                            variant="h6"
-                                            component="span"
-                                            sx={{
-                                                display: 'flex',
-                                                gap: '0.8rem',
-                                                alignItems: 'center',
-                                            }}
-                                        >
-                                            <AssignmentIcon color="secondary" />
-                                            {t(
-                                                'mywork.journey.responsabilities'
-                                            )}
-                                        </Typography>
-                                        <Typography
-                                            variant="caption"
-                                            component="span"
-                                            sx={{
-                                                display: 'flex',
-                                                flexDirection: 'column',
-                                                gap: '1rem',
-                                                marginTop: '5px',
-                                            }}
-                                        >
-                                            {position.responsabilities.map(
-                                                (task: string, i: number) => {
-                                                    return (
-                                                        <span key={i}>
-                                                            {task}
-                                                        </span>
-                                                    );
-                                                }
-                                            )}
-                                        </Typography>
-                                        <Button
-                                            size="large"
-                                            variant="outlined"
-                                            color="secondary"
-                                            sx={{ marginTop: '20px' }}
-                                        >
-                                            See projects
-                                        </Button>
+                                        <ResponsabilitiesBox job={job} />
+                                        <ProjectsBox job={job} />
                                     </Paper>
                                 </AnimateWhenVisible>
                             </TimelineContent>
