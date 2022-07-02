@@ -67,11 +67,11 @@ export default function ContactForm({
                 onChange={handleChange('name')}
                 sx={{
                     opacity: 1,
-                    top: 0,
+                    bottom: 0,
                     zIndex: -1,
                     position: 'absolute',
                     width: 0,
-                    height: 0,
+                    height: 0
                 }}
                 label={t('contact.form.name')}
             />
