@@ -546,6 +546,7 @@
             "position": "Senior Sofware Developer",
             "company": "Grupo TIR, S. A.",
             "team": "Software Development Team, Internal and External Clients",
+            "icon": "developer",
             "responsabilities": [
                 "Low level architecture design",
                 "DB design",
@@ -555,7 +556,7 @@
                 "Communication with Business Analysts and Management"
             ],
             "startDate": "2013-12-01T00:00:00Z",
-            "endDate": "2016-02-01T00:00:00Z",
+            "endDate": "2016-02-28T00:00:00Z",
             "projects": [
                 {
                     "name": "Service Payment Middleware",
@@ -609,6 +610,7 @@
             "position": "Software Development Team Lead",
             "company": "Grupo TIR, S. A.",
             "team": "Software Development Team, New Products Team",
+            "icon": "leadership",
             "responsabilities": [
                 "High level systems design",
                 "Requirements Elicitation",
@@ -616,8 +618,8 @@
                 "Mentoring",
                 "Communication with Business Analysts, Management and Direction"
             ],
-            "startDate": "2016-02-01T00:00:00Z",
-            "endDate": "2019-12-01T00:00:00Z",
+            "startDate": "2016-03-01T00:00:00Z",
+            "endDate": "2019-12-31T00:00:00Z",
             "projects": [
                 {
                     "name": "B2B Marketing Data Capture",
@@ -661,6 +663,7 @@
             "key": 3,
             "position": "Fullstack Software Developer",
             "company": "Telus International - Central America",
+            "icon": "developer",
             "responsabilities": [
                 "Low level architecture design",
                 "Requirements translation",
@@ -669,7 +672,7 @@
             ],
             "team": "GIS Client Team, Subject Matter Expert Group",
             "startDate": "2020-01-01T00:00:00Z",
-            "endDate": "2022-03-01T00:00:00Z",
+            "endDate": "2022-03-14T00:00:00Z",
             "projects": [
                 {
                     "name": "Direct 2 Consumer - iOS App",
@@ -756,14 +759,15 @@
             "position": "Backend Software Engineer",
             "company": "Healthcare.com",
             "team": "Marketing & Communications Team",
+            "icon": "developer",
             "responsabilities": [
                 "Low level architecture design",
                 "Requirements translation",
                 "Provide help to other team members",
                 "Communication with Business Analysts and Management"
             ],
-            "startDate": "2022-03-01T00:00:00Z",
-            "endDate": "2022-06-01T00:00:00Z",
+            "startDate": "2022-03-16T00:00:00Z",
+            "endDate": "2022-06-30T00:00:00Z",
             "projects": [
                 {
                     "name": "Instrumentation - Marketing middleware",
