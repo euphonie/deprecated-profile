@@ -10,31 +10,37 @@ import Typography from '@mui/material/Typography/Typography';
 import theme from '../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import AppBar from '@mui/material/AppBar/AppBar';
-import { Link } from 'react-router-dom';
+
+import * as Scroll from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import HomeIcon from '@mui/icons-material/Home';
 import { SocialIconBox } from './SocialIconBox';
+import { Link } from 'react-router-dom';
 
 const pages = [
     {
-        key: 0,
-        title: 'experience',
-        anchor: '/',
-    },
-    {
         key: 1,
-        title: 'work',
-        anchor: '/',
+        title: 'experience',
+        anchor: 'experience',
+        scrollTo: true
     },
     {
         key: 2,
-        title: 'about',
-        anchor: '/',
+        title: 'work',
+        anchor: 'work',
+        scrollTo: true
     },
     {
         key: 3,
+        title: 'about',
+        anchor: 'about',
+        scrollTo: true
+    },
+    {
+        key: 4,
         title: 'contact',
         anchor: '/contact',
+        scrollTo: false
     },
 ];
 
@@ -71,7 +77,7 @@ export const NavBar = () => {
                                 justifyContent: 'left'
                             }}
                         >
-                            <Link to="/">
+                            <Link to="/" reloadDocument={true}>
                                 <IconButton size="large" color="white">
                                     <HomeIcon />
                                 </IconButton>
@@ -112,18 +118,18 @@ export const NavBar = () => {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <Link
+                                    <Scroll.Link
                                         key={page.title}
                                         to={page.anchor}
-                                        replace={true}
                                         style={{ textDecoration: 'none', color: 'primary' }}
+                                        spy={true} hashSpy={true} smooth={true} duration={500} 
                                     >
                                         <MenuItem onClick={handleCloseNavMenu}>
                                             <Typography textAlign="center">
                                                 {t(`menu.${page.title}`)}
                                             </Typography>
                                         </MenuItem>
-                                    </Link>
+                                    </Scroll.Link>
                                 ))}
                             </Menu>
                         </Box>
@@ -134,12 +140,24 @@ export const NavBar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <Link
+                                page.scrollTo ? <Scroll.Link
+                                    key={page.title}
+                                    to={page.anchor}
+                                    style={{ textDecoration: 'none',  color:"white" }}
+                                    spy={true} hashSpy={true} smooth={true} offset={-50} duration={500} 
+                                >
+                                    <MenuItem>
+                                        <Typography>
+                                            {t(`menu.${page.title}`)}
+                                        </Typography>
+                                    </MenuItem>
+                                </Scroll.Link>
+                                : <Link
                                     key={page.title}
                                     to={page.anchor}
                                     replace={true}
                                     style={{ textDecoration: 'none',  color:"white" }}
-                                >
+                                    >
                                     <MenuItem>
                                         <Typography>
                                             {t(`menu.${page.title}`)}

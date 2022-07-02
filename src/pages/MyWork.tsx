@@ -7,7 +7,7 @@ export default () => {
         <Container disableGutters>
             <Grid container maxWidth="xl">
                 <Grid item xs={12}>
-                   <ExperienceTimeline />
+                    <ExperienceTimeline />
                 </Grid>
             </Grid>
         </Container>
