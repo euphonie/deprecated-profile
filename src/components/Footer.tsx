@@ -9,13 +9,17 @@ import Typography from '@mui/material/Typography/Typography';
 import MenuItem from '@mui/material/MenuItem/MenuItem';
 import { useTranslation } from 'react-i18next';
 import { SocialIconBox } from './SocialIconBox';
+import footerBG from '../resources/img/low-poly-grid-haikei.svg';
+
 
 const bottomAppBar = {
     top: "auto",
     bottom: 0,
     left: 0,
     width: "100%",
-    padding: "10px"
+    padding: "10px",
+    backgroundImage: `url(${footerBG})`,
+    backgroundSize: 'cover'
 };
 
 export const Footer = ({showSocial}: {showSocial: boolean}) => {
@@ -23,7 +27,10 @@ export const Footer = ({showSocial}: {showSocial: boolean}) => {
     
     return (
         <ThemeProvider theme={theme}>
-            <AppBar color="secondary" position={window.location.pathname === "/contact" ? "fixed" : "relative"} style={bottomAppBar}>
+            <AppBar 
+                color="secondary" 
+                position={window.location.pathname === "/contact" ? "fixed" : "relative"} 
+                style={bottomAppBar}>
                 <AnimateWhenVisible animation="fadeTop">
                     <Toolbar sx={{ display: 'flex', width: "100%", padding: "10px", justifyContent: 'space-around' }} >
                         <img src={MadeInGTIcon} style={{height: "60px"}} alt="madeinguatemala"/>
