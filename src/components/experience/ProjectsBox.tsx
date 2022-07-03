@@ -9,6 +9,7 @@ import { ProjectsDialog } from '../dialogs/ProjectsDialog';
 import moment from 'moment';
 import { TechStackBox } from './TechStackBox';
 import Divider from '@mui/material/Divider/Divider';
+import Replay30Icon from '@mui/icons-material/Replay30';
 
 export const ProjectsBox = (props: ProjectBoxProps) => {
     const { t } = useTranslation();
@@ -80,11 +81,25 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                         'MM/YYYY'
                     )}`}</span>
                 </Typography>
-                <Typography sx={{ fontStyle: 'italic' }}>
-                    {activeProject?.multipleReleases
-                        ? 'Notice: This project consisted on multiple releases'
-                        : ''}
-                </Typography>
+                {
+                activeProject?.multipleReleases ?
+                        <Typography
+                            sx={{
+                                fontStyle: 'italic',
+                                alignItems: 'right',
+                                backgroundColor: 'fadedAccent.main',
+                                borderRadius: '5px',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                flexDirection: 'row',
+                                gap: '1rem',
+                            }}
+                        >
+                            'This project consisted on multiple releases'
+                            <Replay30Icon />
+                        </Typography>
+                        : null
+                }
                 <Divider />
                 <Typography variant="h6">
                     {t('projects.dialog.descriptionLabel')}
