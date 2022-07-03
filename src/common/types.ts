@@ -1,5 +1,6 @@
 import { SnackbarOrigin } from "@mui/material/Snackbar/Snackbar";
-import { InternalStandardProps as StandardProps, BoxProps } from '@mui/material';
+import { InternalStandardProps as StandardProps, BoxProps, DialogProps } from '@mui/material';
+import { Dispatch, SetStateAction } from "react";
 
 export interface SnackbarOriginState extends SnackbarOrigin {
     open: boolean;
@@ -20,13 +21,17 @@ export interface SkillChipData {
     yearsOfExperience: number;
 }
 
+export interface TechStackOption { 
+    img: string;
+    label: string;
+}
 export interface JobProject {
     name: string;
     description: string;
     startDate: string;
     endDate: string;
     outcome: string;
-    techStack: string[];
+    techStack: TechStackOption[];
 }
 export interface Job {
     key: number;
@@ -40,10 +45,21 @@ export interface Job {
     projects: JobProject[]
 }
 
+
 export interface ProjectBoxProps extends StandardProps<BoxProps> {
     job: Job
 }
 
 export interface ResponsabilitiesBoxProps extends StandardProps<BoxProps> {
     job: Job
+}
+
+export interface ProjectsDialogProps extends StandardProps<DialogProps> {
+    activeProject?: JobProject;
+    handleClose: any;
+}
+
+export interface TechStackBoxProps extends StandardProps<BoxProps> {
+    technologies: TechStackOption[];
+    showComplete: boolean;
 }

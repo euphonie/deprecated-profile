@@ -34,7 +34,10 @@
         }
     },
     "projects": {
-        "title": "Projects"
+        "title": "Projects",
+        "dialog": {
+            "closeLabel": "Close"
+        }
     },
     "footer": {
         "copyright": "© 2022 Joel Cantoral"
