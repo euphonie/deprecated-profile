@@ -19,6 +19,7 @@
                     "name": "Instrumentation - Marketing middleware",
                     "startDate": "2022-03-16:00:00Z",
                     "endDate": "2022-06-30T00:00:00Z",
+                    "multipleReleases": false,
                     "description": "Instrument current marketing data middleware using Java/Kotlin/Spring boot and expose metrics in a dashboard using Grafana. Connect dashboard with Opsgenie alert system to provide real-time notifications.",
                     "outcome": "Add support to metrics middleware to integrate with different metric collectors (statsd/datadog). Migrate company-wide github action that collected code coverage metrics from datadog to grafana. Github action built using Python and metrics middleware using Java/ Spring Boot. Implementation of dashboard gave visibility on service bottlenecks and areas of improvement of current middleware project. I conducted a series of meetings describing the implementation as it was one of the first dashboards implemented company-wide.",
                     "techStack": [
@@ -56,6 +57,7 @@
                     "name": "Direct 2 Consumer - iOS App",
                     "startDate": "2020-01-01T00:00:00Z",
                     "endDate": "2022-02-01T00:00:00Z",
+                    "multipleReleases": true,
                     "description": "Upgrade tech stack and give support for an Ionic v1 application deployed to iOS. App provided door to door sales prospection for main products in Canada market. ",
                     "outcome": "Tech stack upgraded to conform with new ES6 functionalities. Provided support for hundreds of users distributed in different regions of the country.",
                     "techStack": [
@@ -78,6 +80,7 @@
                     "name": "Direct 2 Consumer - Web App/Back Office",
                     "startDate": "2020-01-01T00:00:00Z",
                     "endDate": "2022-02-01T00:00:00Z",
+                    "multipleReleases": true,
                     "description": "Build version 2 of direct 2 consumer as a web app to provide access in multiple devices and move the backend from Salesforce to an in-house solution.",
                     "outcome": "Migrated backend to an in-house solution and deployed the new version as one of the first teams implementing the complete backend stack in Google Cloud Platform/GCP. Built a new version of the application using Ionic v2/Angular 2+/Typescript and a new user interface. Migration allowed business to save on hundreds of accounts in Salesforce.",
                     "techStack": [
@@ -102,6 +105,7 @@
                     "name": "Route Optimization Module - Microservice/Back office",
                     "startDate": "2021-10-01T00:00:00Z",
                     "endDate": "2022-03-01T00:00:00Z",
+                    "multipleReleases": false,
                     "description": "Integrate route assignment and optimization system to Route4Me's optimization API.",
                     "outcome": "Added a new module and integration to the microservice handling route definition and assignment to manage route creation, optimization and assignment through the back office UI. Implementation was done using NestJS, Typescript,  GKE, Google Cloud Platform.",
                     "techStack": [
@@ -118,6 +122,7 @@
                     "name": "Setup CI/CD - D2C Web App",
                     "startDate": "2020-03-01T00:00:00Z",
                     "endDate": "2020-08-01T00:00:00Z",
+                    "multipleReleases": false,
                     "description": "Setup a CI/CD pipeline for a project built using Ionic v2. The CIO provided a terraform project that worked with Docker, Github, Google Cloud Platform services Container Registry, Cloud Build, GKE, Spinnaker and Secret Management. ",
                     "outcome": "Implementation of pipeline provided an easy way to adopt continuous deployment into GCP. ",
                     "techStack": [
@@ -154,6 +159,7 @@
                     "name": "B2B Marketing Data Capture",
                     "startDate": "2016-02-01T00:00:00Z",
                     "endDate": "2019-12-01T00:00:00Z",
+                    "multipleReleases": true,
                     "description": "Capture marketing insights of small distributors country-wide. Build a database of marketing trends of main products sell by companies in the retail/consumer industry.",
                     "outcome": "A native android app was built to capture the insights through surveys and keep track of surveyors. The app allowed having multiple roles/permissions to have operators, supervisors and administrators. The backend was built using Java and MySQL.\n The captured data was ingested into ArcGIS and dashboards were built using MySQL and Tableau.\n In a second version of the project, the backend and application was migrated to use entirely ArcGIS to have complete compatibility with the client's infrastructure.",
                     "techStack": [
@@ -171,6 +177,7 @@
                     "name": "BTL Operations Front/Back office",
                     "startDate": "2017-05-01T00:00:00Z",
                     "endDate": "2018-05-01T00:00:00Z",
+                    "multipleReleases": true,
                     "description": "Track BTL marketing operations from one of the main telecommunications provider in the country. Track and provide insights on marketing efforts at point of sale's level. ",
                     "outcome": "Project was implemented in two solutions. A native android app to keep track of every BTL operator visiting each distributor, survey-capturing to build personalized dashboards and insights and route creation and assignment.\n Front office was built using AngularJS and connected to the main database in MySQL ",
                     "techStack": [
@@ -185,6 +192,7 @@
                     "name": "B2B E-Commerce Marketplace - Alchilazo",
                     "startDate": "2018-05-01T00:00:00Z",
                     "endDate": "2019-05-01T00:00:00Z",
+                    "multipleReleases": true,
                     "description": "Provide a marketplace platform with a catalog of products from one of the main telecommunications provider in the country. The users were distributions centers in all the regions where the telecom was present. ",
                     "outcome": "The e-commerce solution was bootstrapped using OpenCart and became an important sales channel for physical products (smartphones, tablets, satellite wifi hardware and others). The most outstanding features of the product included: Recommendations, similar products, inbound marketing for new products and restocked products. Sales push via email based on previous purchases when inventory was running low, this was possible as inventory of each distribution center was connected to the platform. Supported mobile access through responsive design. ",
                     "techStack": [
@@ -219,6 +227,7 @@
                     "description": "Build a middleware to support service payments between a fintech application owned by a major telecommunications company and online banking systems.",
                     "startDate": "2013-01-01T00:00:00Z",
                     "endDate": "2014-12-01T00:00:00Z",
+                    "multipleReleases": true,
                     "outcome": "The integration was completed successfully, communicating both parties and enabling a portfolio of 8 main service providers having a regular userbase of thousands of users at country-level.\n To communicate both systems RabbitMQ was used as a Persistance/Queue/Message Handling interface.",
                     "techStack": [
                         { "img": "java.svg", "label": "Java" },
@@ -235,6 +244,7 @@
                     "description": "Build a backoffice to give support to buyers of electronic top-ups products sell by one of the main telecommunications providers in the country. Provide tools for customer service to respond to queries and generate reports to share with the client.",
                     "startDate": "2013-12-01T00:00:00Z",
                     "endDate": "2016-02-01T00:00:00Z",
+                    "multipleReleases": true,
                     "outcome": "Provided real-time service to users in Central America and the US. Attended a userbase of tens of thousands of top-up purchases daily with a customer service of 4 operators.",
                     "techStack": [
                         { "img": "php.svg", "label": "PHP" },
@@ -250,6 +260,7 @@
                     "name": "SMS Middleware",
                     "startDate": "2015-06-01T00:00:00Z",
                     "endDate": "2015-09-01T00:00:00Z",
+                    "multipleReleases": false,
                     "description": "Design and development of a SMS broker to deliver messages through one of the main telecommunications provider's SMPP network. Admin page built using AngularJS. ",
                     "outcome": "Project built using Python/Tornado Server as the middleware to received and processed SMS messages. Persistance and handling of messages was implemented using MS SQL Server.",
                     "techStack": [
@@ -270,6 +281,7 @@
             "name": "Mapamolee - Trips Tracker App",
             "stakeholder": "Karl B.",
             "description": "Android app that kept a history of all trips done by a user and rewarded visiting certain places with badges. Design was provided. App was built using D3.js, Ionic v1, AngularJS, Sqlite for iOS and Android. Created an interactive 3D world globe using canvas for rendering. Globe allowed rotation, scaling, and selection of countries.",
+            "multipleReleases": true,
             "startDate": "2014-11-01T00:00:00Z",
             "endDate": "2015-06-01T00:00:00Z",
             "techStack": [
@@ -288,6 +300,7 @@
             "stakeholder": "Karl B.",
             "startDate": "2015-07-01T00:00:00Z",
             "endDate": "2015-12-01T00:00:00Z",
+            "multipleReleases": true,
             "description": "Android app that kept track of habits and enable reminders creation. Design was provided. App was built using Material UI, Ionic v1, AngularJS, Sqlite for iOS and Android.",
             "techStack": [
                 { "img": "ios.svg", "label": "iOS" },
@@ -305,6 +318,7 @@
             "stakeholder": "Vana - Fintech",
             "startDate": "",
             "endDate": "",
+            "multipleReleases": false,
             "description": "",
             "techStack": [
                 { "img": "python.svg", "label": "Python" },
@@ -320,6 +334,7 @@
             "stakeholder": "Garoo - Jorge M.",
             "startDate": "",
             "endDate": "",
+            "multipleReleases": false,
             "description": "",
             "techStack": [
                 { "img": "meteor.svg", "label": "Meteor" },

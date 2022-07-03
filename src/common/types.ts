@@ -29,6 +29,7 @@ export interface JobProject {
     name: string;
     description: string;
     startDate: string;
+    multipleReleases: boolean; 
     endDate: string;
     outcome: string;
     techStack: TechStackOption[];
