@@ -6,7 +6,7 @@ import stackedBG from '../resources/img/stacked-waves-haikei.svg';
 export default () => {
     return(
         <Container disableGutters maxWidth={false} sx={{backgroundImage: `url(${stackedBG})`, backgroundSize: 'cover'}}>
-            <Grid container maxWidth="xl">
+            <Grid container>
                 <Grid item xs={12}>
                     <ExperienceTimeline />
                 </Grid>

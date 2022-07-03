@@ -20,12 +20,15 @@ import { AnimateWhenVisible } from './animations/AnimateWhenVisible';
 import { ProjectsBox } from './experience/ProjectsBox';
 import { Job } from '../common/types';
 import { ResponsabilitiesBox } from './experience/ResponsabilitiesBox';
+import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
+import styled from '@mui/material/styles/styled';
 
 export default function ExperienceTimeline() {
     const { t } = useTranslation();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <Timeline position="alternate">
+        <Timeline position={isMobile ? 'right' : 'alternate'}>
             <Typography sx={{ textAlign: 'center' }} variant="h5">
                 {t('mywork.journey.title')}
             </Typography>
@@ -37,8 +40,13 @@ export default function ExperienceTimeline() {
                     const yearDuration = eDate.diff(sDate, 'years');
 
                     return (
-                        <TimelineItem key={i}>
-                            
+                        <TimelineItem 
+                          key={i}
+                          sx={{ 
+                            flexDirection: isMobile ? 'column' : 'inherit',
+                            alignItems: isMobile ? 'center' : 'inherit' 
+                          }}
+                        >
                             <TimelineOppositeContent
                                 sx={{
                                     m: 'auto 0',
