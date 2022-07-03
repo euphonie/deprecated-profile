@@ -36,7 +36,10 @@
     "projects": {
         "title": "Projects",
         "dialog": {
-            "closeLabel": "Close"
+            "closeLabel": "Close",
+            "descriptionLabel": "Description",
+            "outcomeLabel": "Outcome",
+            "techStackLabel": "Tech Stack"
         }
     },
     "footer": {

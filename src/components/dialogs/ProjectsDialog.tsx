@@ -24,6 +24,7 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                 open={props.open}
             >
                 <DialogTitle
+                    variant="h6"
                     sx={{
                         m: 0,
                         p: 2,
@@ -31,9 +32,7 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                         color: 'white.main',
                     }}
                 >
-                    <Typography variant="h6">
-                        {props.activeProject?.name ?? ''}
-                    </Typography>
+                    {props.activeProject?.name ?? ''}
                     <IconButton
                         aria-label="close"
                         onClick={props.handleClose}
@@ -50,6 +49,7 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                 <DialogContent
                     sx={{ 
                         color: 'white.main',
+                        backgorundColor: 'transparent',
                         height: '28rem',
                         backgroundImage: `url(${layeredBG})`,
                         backgroundSize: 'cover',

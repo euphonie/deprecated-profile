@@ -57,6 +57,7 @@ export default createTheme({
         secondary: createColor("#242535"),
         accent: createColor("#E9B44C"),
         silver: createColor("#a7a2a9"),
+        fadedAccent: createColor('#E9B44C', 0.6),
         fadedPrimary: createColor("#323444", 0.6),
         white: createColor('#fff'),
         // cards accents

@@ -5,6 +5,7 @@ import Icon from '@mui/material/Icon/Icon';
 import ListItemText from '@mui/material/ListItemText/ListItemText';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from '../../resources/theme/CustomTheme.d';
+import { ListItem, ListItemIcon } from '@mui/material';
 
 export const TechStackBox = (props: TechStackBoxProps) => {
     let technologies = props.technologies;
@@ -25,29 +26,27 @@ export const TechStackBox = (props: TechStackBoxProps) => {
             >
                 {technologies.map((tech: TechStackOption, i: number) => {
                     return (
-                        <IconButton
+                        <ListItemIcon
                             key={i}
-                            size="large"
                             color="white"
                             aria-details={tech.label}
                             sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
-                                padding: '20px',
-                                marginTop: '20px',
+                                padding: '8px',
+                                marginTop: '0',
                                 alignItems: 'center',
-                                backgroundColor: props.showComplete ? 'accent.main' : 'transparent',
-                                borderRadius: '27px',
-                                border: props.showComplete ? '1px solid #000' : 'none'
+                                backgroundColor: props.showComplete ? 'fadedAccent.main' : 'transparent',
+                                borderRadius: '27px'
                             }}
                         >
-                            <Icon>
+                            <Icon sx={{fontSize: '2.5rem', overflow: 'revert'}}>
                                 <img
                                     style={{
                                         width: '100%',
                                         height: '100%',
                                         objectFit: 'contain',
-                                        color: 'white',
+                                        color: 'white'
                                     }}
                                     src={`/tech/${tech.img}`}
                                     alt={tech.label}
@@ -58,7 +57,7 @@ export const TechStackBox = (props: TechStackBoxProps) => {
                                     <ListItemText>{tech.label}</ListItemText>
                                     : null
                             }
-                        </IconButton>
+                        </ListItemIcon>
                     );
                 })}
             </List>

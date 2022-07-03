@@ -84,9 +84,7 @@ export default function ExperienceTimeline() {
                                     <Paper
                                         sx={{
                                             padding: '30px',
-                                            backgroundColor:
-                                                theme.palette.accentGreenSheen
-                                                    .main,
+                                            backgroundColor: '#596F62',
                                             color: theme.palette.white.main,
                                             borderColor: 'secondary',
                                             borderStyle: 'solid',
@@ -105,7 +103,7 @@ export default function ExperienceTimeline() {
                                                 alignItems: 'center',
                                             }}
                                         >
-                                            <EngineeringIcon color="secondary" />
+                                            <EngineeringIcon color="white" />
                                             {job.position}
                                         </Typography>
                                         <Typography
@@ -118,7 +116,7 @@ export default function ExperienceTimeline() {
                                                 alignItems: 'center',
                                             }}
                                         >
-                                            <BusinessIcon color="secondary" />
+                                            <BusinessIcon color="white" />
                                             {job.company}
                                         </Typography>
                                         <Typography
@@ -131,7 +129,7 @@ export default function ExperienceTimeline() {
                                                 alignItems: 'center',
                                             }}
                                         >
-                                            <WorkspacesIcon color="secondary" />
+                                            <WorkspacesIcon color="white" />
                                             {`${t('mywork.journey.team')}: ${
                                                 job.team
                                             }`}

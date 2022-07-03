@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { ProjectsDialog } from '../dialogs/ProjectsDialog';
 import moment from 'moment';
 import { TechStackBox } from './TechStackBox';
+import Divider from '@mui/material/Divider/Divider';
 
 export const ProjectsBox = (props: ProjectBoxProps) => {
     const { t } = useTranslation();
@@ -46,7 +47,7 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                             key={i}
                             size="large"
                             variant="outlined"
-                            color="primary"
+                            color="white"
                             onClick={(evt) => handleProjectModalOpen(project)}
                             sx={{
                                 padding: '20px',
@@ -61,9 +62,7 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
 
                             <TechStackBox
                                 showComplete={false}
-                                technologies={
-                                   project.techStack ?? []
-                                }
+                                technologies={project.techStack ?? []}
                             />
                         </Button>
                     );
@@ -81,8 +80,29 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                         'MM/YYYY'
                     )}`}</span>
                 </Typography>
-                <Typography>{activeProject?.description ?? ''}</Typography>
-                <Typography>{activeProject?.outcome ?? ''}</Typography>
+                <Typography sx={{ fontStyle: 'italic' }}>
+                    {activeProject?.multipleReleases
+                        ? 'Notice: This project consisted on multiple releases'
+                        : ''}
+                </Typography>
+                <Divider />
+                <Typography variant="h6">
+                    {t('projects.dialog.descriptionLabel')}
+                </Typography>
+                <Typography variant="body1">
+                    {activeProject?.description ?? ''}
+                </Typography>
+                <Divider />
+                <Typography variant="h6">
+                    {t('projects.dialog.outcomeLabel')}
+                </Typography>
+                <Typography variant="body1">
+                    {activeProject?.outcome ?? ''}
+                </Typography>
+                <Divider />
+                <Typography variant="h6">
+                    {t('projects.dialog.techStackLabel')}
+                </Typography>
                 <TechStackBox
                     showComplete={true}
                     technologies={activeProject?.techStack ?? []}

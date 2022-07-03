@@ -24,7 +24,7 @@ export const ResponsabilitiesBox = (props: ResponsabilitiesBoxProps) => {
                     alignItems: 'center',
                 }}
             >
-                <AssignmentIcon color="secondary" />
+                <AssignmentIcon color="white" />
                 {t('mywork.journey.responsabilities')}
             </Typography>
             <Typography
@@ -42,7 +42,7 @@ export const ResponsabilitiesBox = (props: ResponsabilitiesBoxProps) => {
                         return (
                             <ListItem key={i}>
                                 <ListItemIcon>
-                                    <TaskAltOutlinedIcon />
+                                    <TaskAltOutlinedIcon color="white" />
                                 </ListItemIcon>
                                 <ListItemText>{task}</ListItemText>
                             </ListItem>
