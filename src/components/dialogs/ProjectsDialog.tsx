@@ -53,7 +53,10 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                         height: '28rem',
                         backgroundImage: `url(${layeredBG})`,
                         backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat'
+                        backgroundRepeat: 'no-repeat',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '0.5rem'
                     }}
                 >
                     {props.children}
