@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Animate } from "react-simple-animate";
-import useOnScreen from "../../hooks/useOnScreen";
+import useOnScreen from "../../common/hooks/useOnScreen";
 
 export const AnimateWhenVisible = ({animation, children}: {animation: string, children: any}) => {
     const ref = useRef(null)

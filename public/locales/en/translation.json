@@ -26,6 +26,22 @@
             "send": "Send"
         }
     },
+    "mywork": {
+        "journey": {
+            "title": "Experience (Tech Journey)",
+            "team": "Teams",
+            "responsabilities": "Main responsabilities"
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "dialog": {
+            "closeLabel": "Close",
+            "descriptionLabel": "Description",
+            "outcomeLabel": "Outcome",
+            "techStackLabel": "Tech Stack"
+        }
+    },
     "footer": {
         "copyright": "© 2022 Joel Cantoral"
     }
