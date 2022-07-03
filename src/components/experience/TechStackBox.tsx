@@ -1,6 +1,5 @@
 import IconButton from '@mui/material/IconButton/IconButton';
 import List from '@mui/material/List/List';
-import Box from '@mui/material/Box/Box';
 import { TechStackBoxProps, TechStackOption } from '../../common/types';
 import Icon from '@mui/material/Icon/Icon';
 import ListItemText from '@mui/material/ListItemText/ListItemText';
@@ -8,9 +7,16 @@ import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from '../../resources/theme/CustomTheme.d';
 
 export const TechStackBox = (props: TechStackBoxProps) => {
-    const technologies = props.showComplete
-        ? props.technologies
-        : props.technologies.slice(0, 10);
+    let technologies = props.technologies;
+    if (!props.showComplete){
+        technologies = [
+            ...props.technologies.slice(0, 5), 
+            {
+                "img": 'more.svg',
+                "label": 'See others'
+            }
+        ];
+    }
 
     return (
         <ThemeProvider theme={theme}>
@@ -30,9 +36,9 @@ export const TechStackBox = (props: TechStackBoxProps) => {
                                 padding: '20px',
                                 marginTop: '20px',
                                 alignItems: 'center',
-                                backgroundColor: 'accent.main',
+                                backgroundColor: props.showComplete ? 'accent.main' : 'transparent',
                                 borderRadius: '27px',
-                                border: '1px solid #000'
+                                border: props.showComplete ? '1px solid #000' : 'none'
                             }}
                         >
                             <Icon>
@@ -47,7 +53,11 @@ export const TechStackBox = (props: TechStackBoxProps) => {
                                     alt={tech.label}
                                 />
                             </Icon>
-                            <ListItemText>{tech.label}</ListItemText>
+                            {
+                                props.showComplete ? 
+                                    <ListItemText>{tech.label}</ListItemText>
+                                    : null
+                            }
                         </IconButton>
                     );
                 })}

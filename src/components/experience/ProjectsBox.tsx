@@ -23,7 +23,6 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
     const handleProjectModalClose = (evt: any) => {
         setProjectModalOpen(false);
     };
-  
 
     return (
         <Box>
@@ -42,7 +41,6 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
             </Typography>
             <Box sx={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 {props.job.projects.map((project: JobProject, i: number) => {
-                    
                     return (
                         <Button
                             key={i}
@@ -53,15 +51,25 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                             sx={{
                                 padding: '20px',
                                 marginTop: '20px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                flexWrap: 'wrap',
                                 flex: '33%',
                             }}
                         >
                             {project.name}
+
+                            <TechStackBox
+                                showComplete={false}
+                                technologies={
+                                   project.techStack ?? []
+                                }
+                            />
                         </Button>
                     );
                 })}
             </Box>
-            <ProjectsDialog 
+            <ProjectsDialog
                 open={isProjectModalOpen}
                 activeProject={activeProject}
                 handleClose={handleProjectModalClose}
@@ -69,11 +77,16 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                 <Typography variant="overline">
                     <span>{`${moment(activeProject?.startDate).format(
                         'MM/YYYY'
-                    )} - ${moment(activeProject?.endDate).format('MM/YYYY')}`}</span>
+                    )} - ${moment(activeProject?.endDate).format(
+                        'MM/YYYY'
+                    )}`}</span>
                 </Typography>
                 <Typography>{activeProject?.description ?? ''}</Typography>
                 <Typography>{activeProject?.outcome ?? ''}</Typography>
-                <TechStackBox showComplete={true} technologies={activeProject?.techStack ?? []} />
+                <TechStackBox
+                    showComplete={true}
+                    technologies={activeProject?.techStack ?? []}
+                />
             </ProjectsDialog>
         </Box>
     );
