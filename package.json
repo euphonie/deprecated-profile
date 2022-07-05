@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://euphonie.github.io",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -35,7 +35,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "pnpm run build",
+    "deploy": "pnpm run predeploy && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +62,7 @@
     "@babel/plugin-syntax-flow": "^7.17.12",
     "@babel/plugin-transform-react-jsx": "^7.17.12",
     "@testing-library/dom": "^8.14.0",
-    "@types/d3": "^7.4.0"
+    "@types/d3": "^7.4.0",
+    "gh-pages": "^4.0.0"
   }
 }
