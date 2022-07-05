@@ -1,11 +1,10 @@
-import IconButton from '@mui/material/IconButton/IconButton';
 import List from '@mui/material/List/List';
 import { TechStackBoxProps, TechStackOption } from '../../common/types';
 import Icon from '@mui/material/Icon/Icon';
 import ListItemText from '@mui/material/ListItemText/ListItemText';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from '../../resources/theme/CustomTheme.d';
-import { ListItem, ListItemIcon } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
 
 export const TechStackBox = (props: TechStackBoxProps) => {
     let technologies = props.technologies;

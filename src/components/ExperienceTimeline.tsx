@@ -21,7 +21,6 @@ import { ProjectsBox } from './experience/ProjectsBox';
 import { Job } from '../common/types';
 import { ResponsabilitiesBox } from './experience/ResponsabilitiesBox';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
-import styled from '@mui/material/styles/styled';
 
 export default function ExperienceTimeline() {
     const { t } = useTranslation();
@@ -67,7 +66,7 @@ export default function ExperienceTimeline() {
                                     color="primary"
                                     sx={{ borderRadius: '2px' }}
                                 >
-                                    {job.icon == 'leadership' ? (
+                                    {job.icon === 'leadership' ? (
                                         <PersonOutlineIcon />
                                     ) : (
                                         <LaptopMacIcon />
