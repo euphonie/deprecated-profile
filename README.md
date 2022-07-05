@@ -1,10 +1,13 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+personal site and portfolio to showcase my work. 
+Built using React / React Router / Material UI. 
 
-## Available Scripts
+Portfolio located at: 
 
-In the project directory, you can run:
+## Badges
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ### `npm start`
 

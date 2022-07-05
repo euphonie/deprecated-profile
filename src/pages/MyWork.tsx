@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid/Grid";
 import ExperienceTimeline from "../components/ExperienceTimeline";
 import stackedBG from '../resources/img/stacked-waves-haikei.svg';
 
-export default () => {
+export default function MyWork() {
     return(
         <Container disableGutters maxWidth={false} sx={{backgroundImage: `url(${stackedBG})`, backgroundSize: 'cover'}}>
             <Grid container>
