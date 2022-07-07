@@ -1,7 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.8c381e12.css",
-    "main.js": "/static/js/main.07dbb29a.js",
+    "main.js": "/static/js/main.1db23a72.js",
+    "static/js/598.46a1aa1b.chunk.js": "/static/js/598.46a1aa1b.chunk.js",
+    "static/js/906.cff948ae.chunk.js": "/static/js/906.cff948ae.chunk.js",
     "static/media/bg-min.jpg": "/static/media/bg-min.2188389ca4bb96bd009a.jpg",
     "static/media/Poppins-Thin.ttf": "/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
     "static/media/Poppins-Light.ttf": "/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
@@ -11,15 +13,17 @@
     "static/media/low-poly-grid-haikei.svg": "/static/media/low-poly-grid-haikei.24e881361d1e84d65e6e99e755b8594f.svg",
     "static/media/stacked-waves-haikei.svg": "/static/media/stacked-waves-haikei.3e66afc3b525620e6a830f7d60ecafc0.svg",
     "static/media/layered-waves-haikei-top.svg": "/static/media/layered-waves-haikei-top.0d1b00c55ae0e6b4a3a9f294ec454c46.svg",
-    "static/media/hackerrank.svg": "/static/media/hackerrank.047ebb29746281c4d8047aadc1d8758e.svg",
+    "static/media/hackerrank.svg": "/static/media/hackerrank.242a5d9d481dcc339a2c46086bc988d6.svg",
     "index.html": "/index.html",
     "static/media/behance.svg": "/static/media/behance.97ef93a436924c9a8aa9641a956ce006.svg",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.8c381e12.css.map": "/static/css/main.8c381e12.css.map",
-    "main.07dbb29a.js.map": "/static/js/main.07dbb29a.js.map"
+    "main.1db23a72.js.map": "/static/js/main.1db23a72.js.map",
+    "598.46a1aa1b.chunk.js.map": "/static/js/598.46a1aa1b.chunk.js.map",
+    "906.cff948ae.chunk.js.map": "/static/js/906.cff948ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8c381e12.css",
-    "static/js/main.07dbb29a.js"
+    "static/js/main.1db23a72.js"
   ]
 }
