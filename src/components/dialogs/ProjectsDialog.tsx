@@ -16,6 +16,9 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                 onClose={props.handleClose}
                 aria-labelledby="customized-dialog-title"
                 open={props.open}
+                sx={{ 
+                    backgorundColor: 'transparent'
+                }}
             >
                 <DialogTitle
                     variant="h6"

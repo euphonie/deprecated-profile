@@ -24,7 +24,7 @@ import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 
 export default function ExperienceTimeline() {
     const { t } = useTranslation();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <Timeline position={isMobile ? 'right' : 'alternate'}>

@@ -10,9 +10,12 @@ import moment from 'moment';
 import { TechStackBox } from './TechStackBox';
 import Divider from '@mui/material/Divider/Divider';
 import Replay30Icon from '@mui/icons-material/Replay30';
+import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
+import theme from '../../resources/theme/CustomTheme.d';
 
 export const ProjectsBox = (props: ProjectBoxProps) => {
     const { t } = useTranslation();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const [activeProject, setActiveProject] = useState<JobProject>();
     const [isProjectModalOpen, setProjectModalOpen] = useState<boolean>(false);
@@ -56,7 +59,7 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 flexWrap: 'wrap',
-                                flex: '33%',
+                                flex: isMobile ? '100%' : '33%',
                             }}
                         >
                             {project.name}
@@ -74,7 +77,7 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                 activeProject={activeProject}
                 handleClose={handleProjectModalClose}
             >
-                <Typography variant="overline">
+                <Typography variant="overline" textAlign={isMobile ? 'center' : 'inherit'}>
                     <span>{`${moment(activeProject?.startDate).format(
                         'MM/YYYY'
                     )} - ${moment(activeProject?.endDate).format(
@@ -95,27 +98,27 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                                 gap: '1rem',
                             }}
                         >
-                            'This project consisted on multiple releases'
+                            {t('projects.dialog.multipleReleasesLabel')}
                             <Replay30Icon />
                         </Typography>
                         : null
                 }
                 <Divider />
-                <Typography variant="h6">
+                <Typography variant="h6" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
                     {t('projects.dialog.descriptionLabel')}
                 </Typography>
-                <Typography variant="body1">
+                <Typography variant="body1" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
                     {activeProject?.description ?? ''}
                 </Typography>
                 <Divider />
-                <Typography variant="h6">
+                <Typography variant="h6" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
                     {t('projects.dialog.outcomeLabel')}
                 </Typography>
-                <Typography variant="body1">
+                <Typography variant="body1" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
                     {activeProject?.outcome ?? ''}
                 </Typography>
                 <Divider />
-                <Typography variant="h6">
+                <Typography variant="h6" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
                     {t('projects.dialog.techStackLabel')}
                 </Typography>
                 <TechStackBox

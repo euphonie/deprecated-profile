@@ -7,7 +7,7 @@
     },
     "landing": {
         "title": "Hi, I'm Joel",
-        "subtitle": "Fullstack Software Developer and Computation Language Enthusiast from Guatemala",
+        "subtitle": "Fullstack Software Developer and Language/ Communication Enthusiast from Guatemala",
         "summary": "",
         "cta":{
             "contact": "Contact Me",
@@ -39,7 +39,8 @@
             "closeLabel": "Close",
             "descriptionLabel": "Description",
             "outcomeLabel": "Outcome",
-            "techStackLabel": "Tech Stack"
+            "techStackLabel": "Tech Stack",
+            "multipleReleasesLabel": "This project consisted on multiple releases"
         }
     },
     "footer": {
