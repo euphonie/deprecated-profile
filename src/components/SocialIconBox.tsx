@@ -6,8 +6,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GithubIcon from '@mui/icons-material/GitHub';
 import HackerrankIcon from './icons/HackerrankIcon';
 import BehanceIcon from './icons/BehanceIcon';
+import useMediaQuery from "@mui/material/useMediaQuery/useMediaQuery";
+import theme from '../resources/theme/CustomTheme.d';
 
 export const SocialIconBox = () => {
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return(
         <Box
             sx={{
@@ -26,12 +30,12 @@ export const SocialIconBox = () => {
                     <GithubIcon />
                 </IconButton>
             </Link>
-            <Link to={links.behance} target="_blank">
+            <Link to={links.behance} target="_blank" style={{display: isMobile ? 'none' : 'inherit'}}>
                 <IconButton size="large" color="white">
                     <BehanceIcon />
                 </IconButton>
             </Link>
-            <Link to={links.hackerrank} target="_blank">
+            <Link to={links.hackerrank} target="_blank" style={{display: isMobile ? 'none' : 'inherit'}}>
                 <IconButton size="large" color="white">
                     <HackerrankIcon />
                 </IconButton>

@@ -12,6 +12,8 @@ import FaceIcon from '@mui/icons-material/Face';
 import { Link } from 'react-router-dom';
 
 import BG from '../resources/img/bg-min.jpg';
+import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
+import Stack from '@mui/material/Stack/Stack';
 
 const Heading = styled(Typography)<{ fontSize?: string }>`
     color: white;
@@ -22,6 +24,7 @@ const Heading = styled(Typography)<{ fontSize?: string }>`
 
 export const Hero = () => {
     const { t } = useTranslation();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <ThemeProvider theme={theme}>
@@ -32,58 +35,70 @@ export const Hero = () => {
                     padding: '24px',
                     objectFit: 'cover',
                     width: '100%',
-                    height: '750px',
+                    height: '55rem',
                     top: '0',
                     left: '0',
                     backgroundImage: `url(${BG})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
                 }}
             >
-                <Grid item xs={12} sm={6}/>
-                <Grid item xs={12} sm={6} pt={15}>
+                <Grid
+                    item
+                    xs={12}
+                    sm={5}
+                    sx={{ display: isMobile ? 'none' : 'block' }}
+                />
+                <Grid item xs={12} sm={7} pt="6rem">
                     <AnimateWhenVisible animation="fadeTop">
-                        <Heading align="right">{t('landing.title')}</Heading>
+                        <Heading fontSize="4rem" align="right">
+                            {t('landing.title')}
+                        </Heading>
                     </AnimateWhenVisible>
                     <AnimateWhenVisible animation="fadeTop">
-                        <Heading fontSize="3vh" align="right">
+                        <Heading fontSize="1.5rem" align="right">
                             {t('landing.subtitle')}
                         </Heading>
                     </AnimateWhenVisible>
                     <AnimateWhenVisible animation="fadeTop">
-                        <Heading fontSize="2vh" align="right">
+                        <Heading fontSize="1.5rem" align="right">
                             {t('landing.summary')}
                         </Heading>
                     </AnimateWhenVisible>
+
                     <AnimateWhenVisible animation="fadeTop">
-                        <Button
-                            variant="contained"
-                            color="accent"
-                            size="large"
-                            disableElevation
-                            endIcon={<SendIcon />}
-                            sx={{ float: 'right', margin: '20px' }}
+                        <Stack
+                            direction={{ xs: 'column', sm: 'column', md: 'column'}}
+                            spacing={{xs: 2, sm: 2, md: 3}}
+                            alignItems="flex-end"
                         >
-                            <Link
-                                to="/contact"
-                                style={{
-                                    textDecoration: 'none',
-                                    color: 'primary',
-                                }}
+                            <Button
+                                variant="contained"
+                                color="accent"
+                                size="large"
+                                disableElevation
+                                endIcon={<SendIcon color="white" />}
                             >
-                                {t('landing.cta.contact')}
-                            </Link>
-                        </Button>
-                        <Button
-                            variant="contained"
-                            size="large"
-                            disableElevation
-                            endIcon={<FaceIcon />}
-                            sx={{ float: 'right', margin: '20px' }}
-                        >
-                            {t('landing.cta.work')}
-                        </Button>
+                                <Link
+                                    to="/contact"
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'white',
+                                    }}
+                                >
+                                    {t('landing.cta.contact')}
+                                </Link>
+                            </Button>
+                            <Button
+                                variant="contained"
+                                size="large"
+                                disableElevation
+                                endIcon={<FaceIcon />}
+                            >
+                                {t('landing.cta.work')}
+                            </Button>
+                        </Stack>
                     </AnimateWhenVisible>
                 </Grid>
             </Grid>

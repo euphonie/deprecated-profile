@@ -4,9 +4,12 @@ import Icon from '@mui/material/Icon/Icon';
 import ListItemText from '@mui/material/ListItemText/ListItemText';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from '../../resources/theme/CustomTheme.d';
-import { ListItemIcon } from '@mui/material';
+import ListItemIcon from '@mui/material/ListItemIcon/ListItemIcon';
+import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 
 export const TechStackBox = (props: TechStackBoxProps) => {
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     let technologies = props.technologies;
     if (!props.showComplete){
         technologies = [
@@ -21,7 +24,7 @@ export const TechStackBox = (props: TechStackBoxProps) => {
     return (
         <ThemeProvider theme={theme}>
             <List
-                sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '1rem' }}
+                sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '1rem', flexBasis: 'auto' }}
             >
                 {technologies.map((tech: TechStackOption, i: number) => {
                     return (
@@ -32,19 +35,19 @@ export const TechStackBox = (props: TechStackBoxProps) => {
                             sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
-                                padding: '8px',
                                 marginTop: '0',
                                 alignItems: 'center',
                                 backgroundColor: props.showComplete ? 'fadedAccent.main' : 'transparent',
-                                borderRadius: '27px'
+                                borderRadius: '4px',
+                                padding: '4px',
+                                flexGrow: '1'
                             }}
                         >
-                            <Icon sx={{fontSize: '2.5rem', overflow: 'revert'}}>
+                            <Icon sx={{fontSize: isMobile ?  '1.5rem' : '2.5rem', overflow: 'revert'}}>
                                 <img
                                     style={{
                                         width: '100%',
                                         height: '100%',
-                                        objectFit: 'contain',
                                         color: 'white'
                                     }}
                                     src={`/tech/${tech.img}`}
@@ -53,7 +56,7 @@ export const TechStackBox = (props: TechStackBoxProps) => {
                             </Icon>
                             {
                                 props.showComplete ? 
-                                    <ListItemText>{tech.label}</ListItemText>
+                                    <ListItemText sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>{tech.label}</ListItemText>
                                     : null
                             }
                         </ListItemIcon>
