@@ -6,7 +6,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { ProjectsDialogProps } from '../../common/types';
 import theme from '../../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
-import layeredBG from '../../resources/img/layered-waves-haikei-top.svg';
+import layeredBG from '../../resources/img/layered-waves-haikei-top.webp';
 
 export const ProjectsDialog = (props: ProjectsDialogProps) => {
     return (

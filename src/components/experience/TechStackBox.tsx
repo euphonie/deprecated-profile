@@ -52,6 +52,7 @@ export const TechStackBox = (props: TechStackBoxProps) => {
                                     }}
                                     src={`/tech/${tech.img}`}
                                     alt={tech.label}
+                                    loading="lazy"
                                 />
                             </Icon>
                             {

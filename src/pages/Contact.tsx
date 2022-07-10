@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { Footer } from '../components/Footer';
 import ContactForm from '../components/forms/ContactForm';
 import theme from '../resources/theme/CustomTheme.d';
-import stackedBG from '../resources/img/stacked-waves-haikei.svg';
+import stackedBG from '../resources/img/stacked-waves-haikei.webp';
 
 import { db } from '../config/firebase';
 import {

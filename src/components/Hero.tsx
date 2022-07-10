@@ -11,7 +11,7 @@ import SendIcon from '@mui/icons-material/Send';
 import FaceIcon from '@mui/icons-material/Face';
 import { Link } from 'react-router-dom';
 
-import BG from '../resources/img/bg-min.jpg';
+import BG from '../resources/img/bg-min.webp';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 import Stack from '@mui/material/Stack/Stack';
 
