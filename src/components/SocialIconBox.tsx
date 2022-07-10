@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box/Box";
 import IconButton from "@mui/material/IconButton/IconButton";
 import { Link } from "react-router-dom";
-import links from "../config/links";
+import SocialLinks from "../config/SocialLinks";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GithubIcon from '@mui/icons-material/GitHub';
 import HackerrankIcon from './icons/HackerrankIcon';
@@ -20,22 +20,22 @@ export const SocialIconBox = () => {
                 justifyContent: 'right',
             }}
         >
-            <Link to={links.linkedin} target="_blank">
+            <Link to={SocialLinks.linkedin} target="_blank">
                 <IconButton size="large" color="white">
                     <LinkedInIcon />
                 </IconButton>
             </Link>
-            <Link to={links.gh} target="_blank">
+            <Link to={SocialLinks.gh} target="_blank">
                 <IconButton size="large" color="white">
                     <GithubIcon />
                 </IconButton>
             </Link>
-            <Link to={links.behance} target="_blank" style={{display: isMobile ? 'none' : 'inherit'}}>
+            <Link to={SocialLinks.behance} target="_blank" style={{display: isMobile ? 'none' : 'inherit'}}>
                 <IconButton size="large" color="white">
                     <BehanceIcon />
                 </IconButton>
             </Link>
-            <Link to={links.hackerrank} target="_blank" style={{display: isMobile ? 'none' : 'inherit'}}>
+            <Link to={SocialLinks.hackerrank} target="_blank" style={{display: isMobile ? 'none' : 'inherit'}}>
                 <IconButton size="large" color="white">
                     <HackerrankIcon />
                 </IconButton>
