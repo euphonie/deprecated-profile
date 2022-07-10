@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container/Container";
 import Grid from "@mui/material/Grid/Grid";
 import ExperienceTimeline from "../components/ExperienceTimeline";
-import stackedBG from '../resources/img/stacked-waves-haikei.svg';
+import stackedBG from '../resources/img/stacked-waves-haikei.webp';
 
 export default function MyWork() {
     return(

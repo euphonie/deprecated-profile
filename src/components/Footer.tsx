@@ -2,13 +2,13 @@ import AppBar from '@mui/material/AppBar/AppBar';
 import theme from '../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import Toolbar from '@mui/material/Toolbar/Toolbar';
-import MadeInGTIcon from '../resources/img/madeingt.png';
+import MadeInGTIcon from '../resources/img/madeingt.webp';
 import { AnimateWhenVisible } from './animations/AnimateWhenVisible';
 import Typography from '@mui/material/Typography/Typography';
 import MenuItem from '@mui/material/MenuItem/MenuItem';
 import { useTranslation } from 'react-i18next';
 import { SocialIconBox } from './SocialIconBox';
-import footerBG from '../resources/img/low-poly-grid-haikei.svg';
+import footerBG from '../resources/img/low-poly-grid-haikei.webp';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 
 const bottomAppBar = {
@@ -49,8 +49,10 @@ export const Footer = ({ showSocial }: { showSocial: boolean }) => {
                     >
                         <img
                             src={MadeInGTIcon}
-                            style={{ height: '60px' }}
+                            height="60"
+                            width="70.31"
                             alt="madeinguatemala"
+                            loading="lazy"
                         />
                         <div style={{ display: showSocial ? 'block' : 'none' }}>
                             <SocialIconBox />
