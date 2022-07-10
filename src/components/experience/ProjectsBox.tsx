@@ -25,7 +25,7 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
         setProjectModalOpen(true);
     };
 
-    const handleProjectModalClose = (evt: any) => {
+    const handleProjectModalClose = (_evt: any) => {
         setProjectModalOpen(false);
     };
 
@@ -52,7 +52,7 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                             size="large"
                             variant="outlined"
                             color="white"
-                            onClick={(evt) => handleProjectModalOpen(project)}
+                            onClick={(_evt) => handleProjectModalOpen(project)}
                             sx={{
                                 padding: '20px',
                                 marginTop: '20px',

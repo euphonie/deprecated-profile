@@ -69,7 +69,7 @@ export const Contact = () => {
         });
     };
 
-    const handleSave = (evt:  any) => {
+    const handleSave = (_evt:  any) => {
         saveMessage(values).then(
             () => {
                 updateAnimation('pika-mailman-carry');

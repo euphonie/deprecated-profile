@@ -1,11 +1,9 @@
 import { SnackbarOrigin } from "@mui/material/Snackbar/Snackbar";
 import { InternalStandardProps as StandardProps, BoxProps, DialogProps } from '@mui/material';
-import { Dispatch, SetStateAction } from "react";
 
 export interface SnackbarOriginState extends SnackbarOrigin {
     open: boolean;
-};
-
+}
 
 export type ContactFormState = {
     email: string;
