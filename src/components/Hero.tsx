@@ -15,6 +15,8 @@ import BG from '../resources/img/bg-min.webp';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 import Stack from '@mui/material/Stack/Stack';
 
+import bottomHero from '../resources/img/bottom-hero.webp';
+
 const Heading = styled(Typography)<{ fontSize?: string }>`
     color: white;
     font-size: ${(p) => (p.fontSize ? p.fontSize : '8vh')};
@@ -38,7 +40,7 @@ export const Hero = () => {
                     height: '55rem',
                     top: '0',
                     left: '0',
-                    backgroundImage: `url(${BG})`,
+                    backgroundImage: `url(${bottomHero}), url(${BG})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
@@ -100,6 +102,7 @@ export const Hero = () => {
                             </Button>
                         </Stack>
                     </AnimateWhenVisible>
+                    
                 </Grid>
             </Grid>
         </ThemeProvider>

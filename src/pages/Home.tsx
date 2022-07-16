@@ -9,7 +9,7 @@ const MyWork = React.lazy(() => import('./MyWork'));
 
 export const Home = () => {
     return (
-        <div>
+        <>
             <Container sx={{maxWidth: '100%'}} maxWidth={false} disableGutters >
                 <Scroll.Element name="home">
                     <Hero />
@@ -23,6 +23,6 @@ export const Home = () => {
             <Container sx={{maxWidth: '100%'}} maxWidth={false} disableGutters>
                 <Footer showSocial={true} />
             </Container>
-        </div>
+        </>
     );
 };
