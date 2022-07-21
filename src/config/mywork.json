@@ -21,7 +21,13 @@
                     "endDate": "2022-06-30T00:00:00Z",
                     "multipleReleases": false,
                     "description": "Instrument current marketing data middleware using Java/Kotlin/Spring boot and expose metrics in a dashboard using Grafana. Connect dashboard with Opsgenie alert system to provide real-time notifications.",
-                    "outcome": "Add support to metrics middleware to integrate with different metric collectors (statsd/datadog). Migrate company-wide github action that collected code coverage metrics from datadog to grafana. Github action built using Python and metrics middleware using Java/ Spring Boot. Implementation of dashboard gave visibility on service bottlenecks and areas of improvement of current middleware project. I conducted a series of meetings describing the implementation as it was one of the first dashboards implemented company-wide.",
+                    "outcomes": [
+                        "Add support to metrics middleware to integrate with different metric collectors (statsd/datadog).",
+                        "Migrate company-wide github action that collected code coverage metrics from datadog to grafana.",
+                        "Github action built using Python and metrics middleware using Java/ Spring Boot.",
+                        "Implementation of dashboard gave visibility on service bottlenecks and areas of improvement of current middleware project.",
+                        "I conducted a series of meetings describing the implementation as it was one of the first dashboards implemented company-wide."
+                    ],
                     "techStack": [
                         { "class": "java-plain", "label": "Java" },
                         { "class": "github-original", "label": "Github" },
@@ -60,7 +66,10 @@
                     "endDate": "2022-02-01T00:00:00Z",
                     "multipleReleases": true,
                     "description": "Upgrade tech stack and give support for an Ionic v1 application deployed to iOS. App provided door to door sales prospection for main products in Canada market. ",
-                    "outcome": "Tech stack upgraded to conform with new ES6 functionalities. Provided support for hundreds of users distributed in different regions of the country.",
+                    "outcomes": [
+                        "Tech stack upgraded to conform with new ES6 functionalities.",
+                        "Provided support for hundreds of users distributed in different regions of the country."
+                    ],
                     "techStack": [
                         { "class": "ios", "label": "iOS", "useCustom": true },
                         { "class": "xcode-plain", "label": "XCode" },
@@ -83,7 +92,11 @@
                     "endDate": "2022-02-01T00:00:00Z",
                     "multipleReleases": true,
                     "description": "Build version 2 of direct 2 consumer as a web app to provide access in multiple devices and move the backend from Salesforce to an in-house solution.",
-                    "outcome": "Migrated backend to an in-house solution and deployed the new version as one of the first teams implementing the complete backend stack in Google Cloud Platform/GCP. Built a new version of the application using Ionic v2/Angular 2+/Typescript and a new user interface. Migration allowed business to save on hundreds of accounts in Salesforce.",
+                    "outcomes": [
+                        "Migrated backend to an in-house solution and deployed the new version as one of the first teams implementing the complete backend stack in Google Cloud Platform/GCP.",
+                        "Built a new version of the application using Ionic v2/Angular 2+/Typescript and a new user interface.",
+                        "Migration allowed business to save on hundreds of accounts in Salesforce."
+                    ],
                     "techStack": [
                         { "class": "docker-plain", "label": "Docker" },
                         { "class": "kubernetes-plain", "label": "Kubernetes" },
@@ -107,7 +120,10 @@
                     "endDate": "2022-03-01T00:00:00Z",
                     "multipleReleases": false,
                     "description": "Integrate route assignment and optimization system to Route4Me's optimization API.",
-                    "outcome": "Added a new module and integration to the microservice handling route definition and assignment to manage route creation, optimization and assignment through the back office UI. Implementation was done using NestJS, Typescript,  GKE, Google Cloud Platform.",
+                    "outcomes": [
+                        "Added a new module and integration to the microservice handling route definition and assignment to manage route creation, optimization and assignment through the back office UI.",
+                        "Implementation was done using NestJS, Typescript,  GKE, Google Cloud Platform."
+                    ],
                     "techStack": [
                         { "class": "googlecloud-plain", "label": "Google Cloud Platform" },
                         { "class": "typescript-plain", "label": "Typescript" },
@@ -124,7 +140,9 @@
                     "endDate": "2020-08-01T00:00:00Z",
                     "multipleReleases": false,
                     "description": "Setup a CI/CD pipeline for a project built using Ionic v2. The CIO provided a terraform project that worked with Docker, Github, Google Cloud Platform services Container Registry, Cloud Build, GKE, Spinnaker and Secret Management. ",
-                    "outcome": "Implementation of pipeline provided an easy way to adopt continuous deployment into GCP. ",
+                    "outcomes": [
+                        "Implementation of pipeline provided an easy way to adopt continuous deployment into GCP."
+                    ],
                     "techStack": [
                         { "class": "docker-plain", "label": "Docker" },
                         { "class": "kubernetes-plain", "label": "Kubernetes" },
@@ -161,7 +179,12 @@
                     "endDate": "2019-12-01T00:00:00Z",
                     "multipleReleases": true,
                     "description": "Capture marketing insights of small distributors country-wide. Build a database of marketing trends of main products sell by companies in the retail/consumer industry.",
-                    "outcome": "A native android app was built to capture the insights through surveys and keep track of surveyors. The app allowed having multiple roles/permissions to have operators, supervisors and administrators. The backend was built using Java and MySQL.\n The captured data was ingested into ArcGIS and dashboards were built using MySQL and Tableau.\n In a second version of the project, the backend and application was migrated to use entirely ArcGIS to have complete compatibility with the client's infrastructure.",
+                    "outcomes": [
+                        "A native android app was built to capture the insights through surveys and keep track of surveyors.",
+                        "The app allowed having multiple roles/permissions to have operators, supervisors and administrators.",
+                        "The backend was built using Java and MySQL.\n The captured data was ingested into ArcGIS and dashboards were built using MySQL and Tableau.",
+                        "In a second version of the project, the backend and application was migrated to use entirely ArcGIS to have complete compatibility with the client's infrastructure."
+                    ],
                     "techStack": [
                         { "class": "java-plain", "label": "Java" },
                         { "class": "android-plain", "label": "Android" },
@@ -179,7 +202,11 @@
                     "endDate": "2018-05-01T00:00:00Z",
                     "multipleReleases": true,
                     "description": "Track BTL marketing operations from one of the main telecommunications provider in the country. Track and provide insights on marketing efforts at point of sale's level. ",
-                    "outcome": "Project was implemented in two solutions. A native android app to keep track of every BTL operator visiting each distributor, survey-capturing to build personalized dashboards and insights and route creation and assignment.\n Front office was built using AngularJS and connected to the main database in MySQL ",
+                    "outcomes": [
+                        "Project was implemented in two solutions.",
+                        "A native android app to keep track of every BTL operator visiting each distributor, survey-capturing to build personalized dashboards and insights and route creation and assignment.",
+                        "Front office was built using AngularJS and connected to the main database in MySQL."
+                    ],
                     "techStack": [
                         { "class": "java-plain", "label": "Java" },
                         { "class": "kotlin-plain", "label": "Kotlin" },
@@ -194,7 +221,12 @@
                     "endDate": "2019-05-01T00:00:00Z",
                     "multipleReleases": true,
                     "description": "Provide a marketplace platform with a catalog of products from one of the main telecommunications provider in the country. The users were distributions centers in all the regions where the telecom was present. ",
-                    "outcome": "The e-commerce solution was bootstrapped using OpenCart and became an important sales channel for physical products (smartphones, tablets, satellite wifi hardware and others). The most outstanding features of the product included: Recommendations, similar products, inbound marketing for new products and restocked products. Sales push via email based on previous purchases when inventory was running low, this was possible as inventory of each distribution center was connected to the platform. Supported mobile access through responsive design. ",
+                    "outcomes": [
+                        "The e-commerce solution was bootstrapped using OpenCart and became an important sales channel for physical products (smartphones, tablets, satellite wifi hardware and others).",
+                        "The most outstanding features of the product included: Recommendations, similar products, inbound marketing for new products and restocked products.",
+                        "Sales push via email based on previous purchases when inventory was running low, this was possible as inventory of each distribution center was connected to the platform.",
+                        "Supported mobile access through responsive design."
+                    ],
                     "techStack": [
                         { "class": "php-plain", "label": "PHP" },
                         { "class": "opencart", "label": "Opencart", "useCustom": true },
@@ -228,7 +260,10 @@
                     "startDate": "2013-01-01T00:00:00Z",
                     "endDate": "2014-12-01T00:00:00Z",
                     "multipleReleases": true,
-                    "outcome": "The integration was completed successfully, communicating both parties and enabling a portfolio of 8 main service providers having a regular userbase of thousands of users at country-level.\n To communicate both systems RabbitMQ was used as a Persistance/Queue/Message Handling interface.",
+                    "outcomes": [
+                        "The integration was completed successfully, communicating both parties and enabling a portfolio of 8 main service providers having a regular userbase of thousands of users at country-level.",
+                        "To communicate both systems RabbitMQ was used as a Persistance/Queue/Message Handling interface."
+                    ],
                     "techStack": [
                         { "class": "java-plain", "label": "Java" },
                         { "class": "api", "label": "API Design", "useCustom": true },
@@ -245,7 +280,10 @@
                     "startDate": "2013-12-01T00:00:00Z",
                     "endDate": "2016-02-01T00:00:00Z",
                     "multipleReleases": true,
-                    "outcome": "Provided real-time service to users in Central America and the US. Attended a userbase of tens of thousands of top-up purchases daily with a customer service of 4 operators.",
+                    "outcomes": [
+                        "Provided real-time service to users in Central America and the US.",
+                        "Attended a userbase of tens of thousands of top-up purchases daily with a customer service of 4 operators."
+                    ],
                     "techStack": [
                         { "class": "php-plain", "label": "PHP" },
                         { "class": "jquery-plain", "label": "jQuery" },
@@ -262,7 +300,9 @@
                     "endDate": "2015-09-01T00:00:00Z",
                     "multipleReleases": false,
                     "description": "Design and development of a SMS broker to deliver messages through one of the main telecommunications provider's SMPP network. Admin page built using AngularJS. ",
-                    "outcome": "Project built using Python/Tornado Server as the middleware to received and processed SMS messages. Persistance and handling of messages was implemented using MS SQL Server.",
+                    "outcomes": [
+                        "Project built using Python/Tornado Server as the middleware to received and processed SMS messages.","Persistance and handling of messages was implemented using MS SQL Server."
+                    ],
                     "techStack": [
                         { "class": "python-plain", "label": "Python" },
                         { "class": "microsoftsqlserver-plain", "label": "MS SQL Server" },

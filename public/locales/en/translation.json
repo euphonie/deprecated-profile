@@ -37,8 +37,7 @@
         "title": "Projects",
         "dialog": {
             "closeLabel": "Close",
-            "descriptionLabel": "Description",
-            "outcomeLabel": "Outcome",
+            "outcomeLabel": "Outcomes",
             "techStackLabel": "Tech Stack",
             "multipleReleasesLabel": "This project consisted on multiple releases"
         }

@@ -30,7 +30,7 @@ export interface JobProject {
     startDate: string;
     multipleReleases: boolean; 
     endDate: string;
-    outcome: string;
+    outcomes: string[];
     techStack: TechStackOption[];
 }
 export interface Job {

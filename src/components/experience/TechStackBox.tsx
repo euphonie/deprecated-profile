@@ -56,13 +56,13 @@ export const TechStackBox = (props: TechStackBoxProps) => {
                                 flexDirection: 'column',
                                 marginTop: '0',
                                 alignItems: 'center',
-                                backgroundColor: props.showComplete ? 'fadedAccent.main' : 'transparent',
+                                backgroundColor: props.showComplete ? 'white.main' : 'transparent',
                                 borderRadius: '4px',
                                 padding: '4px',
                                 flexGrow: '1'
                             }}
                         >
-                            <Icon sx={{fontSize: isMobile ?  '1.5rem' : '2.5rem', overflow: 'revert'}}>
+                            <Icon sx={{fontSize: isMobile ?  '1.5rem' : '2rem', overflow: 'revert'}}>
                                 { renderIcon(tech) }
                             </Icon>
                             {

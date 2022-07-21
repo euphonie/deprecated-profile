@@ -6,7 +6,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import { ProjectsDialogProps } from '../../common/types';
 import theme from '../../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
-import layeredBG from '../../resources/img/layered-waves-haikei-top.webp';
 
 export const ProjectsDialog = (props: ProjectsDialogProps) => {
     return (
@@ -17,7 +16,7 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                 aria-labelledby="customized-dialog-title"
                 open={props.open}
                 sx={{ 
-                    backgorundColor: 'transparent'
+                    backgorundColor: 'secondary.main'
                 }}
             >
                 <DialogTitle
@@ -25,8 +24,8 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                     sx={{
                         m: 0,
                         p: 2,
-                        backgroundColor: 'secondary.main',
-                        color: 'white.main',
+                        backgroundColor: 'accent.main',
+                        color: 'secondary.main',
                     }}
                 >
                     {props.activeProject?.name ?? ''}
@@ -37,7 +36,7 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                             position: 'absolute',
                             right: 8,
                             top: 8,
-                            color: theme.palette.grey[500]
+                            color: 'secondary.main'
                         }}
                     >
                         <CloseIcon />
@@ -46,11 +45,8 @@ export const ProjectsDialog = (props: ProjectsDialogProps) => {
                 <DialogContent
                     sx={{ 
                         color: 'white.main',
-                        backgorundColor: 'transparent',
+                        backgroundColor: 'secondary.main',
                         height: '28rem',
-                        backgroundImage: `url(${layeredBG})`,
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '0.5rem'

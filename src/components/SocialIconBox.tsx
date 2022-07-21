@@ -14,6 +14,7 @@ export const SocialIconBox = () => {
 
     return(
         <Box
+            component="div"
             sx={{
                 flexGrow: 1,
                 display: 'flex',
