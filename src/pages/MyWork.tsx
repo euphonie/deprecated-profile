@@ -5,7 +5,7 @@ import stackedBG from '../resources/img/stacked-waves-haikei.webp';
 
 export default function MyWork() {
     return(
-        <Container disableGutters maxWidth={false} sx={{backgroundImage: `url(${stackedBG})`, backgroundSize: 'cover'}}>
+        <Container disableGutters maxWidth={false} sx={{backgroundImage: `url(${stackedBG})`, backgroundSize: 'contain'}}>
             <Grid container>
                 <Grid item xs={12}>
                     <ExperienceTimeline />
