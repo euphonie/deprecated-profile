@@ -20,8 +20,9 @@ export interface SkillChipData {
 }
 
 export interface TechStackOption { 
-    img: string;
+    class: string;
     label: string;
+    useCustom?: boolean;
 }
 export interface JobProject {
     name: string;

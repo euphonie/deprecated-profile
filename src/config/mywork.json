@@ -23,17 +23,18 @@
                     "description": "Instrument current marketing data middleware using Java/Kotlin/Spring boot and expose metrics in a dashboard using Grafana. Connect dashboard with Opsgenie alert system to provide real-time notifications.",
                     "outcome": "Add support to metrics middleware to integrate with different metric collectors (statsd/datadog). Migrate company-wide github action that collected code coverage metrics from datadog to grafana. Github action built using Python and metrics middleware using Java/ Spring Boot. Implementation of dashboard gave visibility on service bottlenecks and areas of improvement of current middleware project. I conducted a series of meetings describing the implementation as it was one of the first dashboards implemented company-wide.",
                     "techStack": [
-                        { "img": "java.svg", "label": "Java" },
-                        { "img": "github.svg", "label": "Github" },
-                        { "img": "grafana.svg", "label": "Grafana" },
-                        { "img": "kotlin.svg", "label": "Kotlin" },
+                        { "class": "java-plain", "label": "Java" },
+                        { "class": "github-original", "label": "Github" },
+                        { "class": "grafana-plain", "label": "Grafana" },
+                        { "class": "kotlin-plain", "label": "Kotlin" },
+                        { "class": "gradle-plain", "label": "Gradle" },
                         {
-                            "img": "springboot.svg",
+                            "class": "spring-plain",
                             "label": "Java Spring Boot"
                         },
-                        { "img": "aws.svg", "label": "AWS" },
-                        { "img": "tech.svg", "label": "StatsD" },
-                        { "img": "python.svg", "label": "Python" }
+                        { "class": "amazonwebservices-original", "label": "AWS" },
+                        { "class": "tech", "label": "StatsD", "useCustom": true },
+                        { "class": "python-plain", "label": "Python" }
                     ]
                 }
             ]
@@ -61,19 +62,19 @@
                     "description": "Upgrade tech stack and give support for an Ionic v1 application deployed to iOS. App provided door to door sales prospection for main products in Canada market. ",
                     "outcome": "Tech stack upgraded to conform with new ES6 functionalities. Provided support for hundreds of users distributed in different regions of the country.",
                     "techStack": [
-                        { "img": "ios.svg", "label": "iOS" },
-                        { "img": "xcode.svg", "label": "XCode" },
-                        { "img": "github.svg", "label": "Github" },
-                        { "img": "nodejs.svg", "label": "NodeJS" },
-                        { "img": "git.svg", "label": "Git" },
-                        { "img": "jenkins.svg", "label": "Jenkins" },
-                        { "img": "ionic.svg", "label": "Ionic" },
-                        { "img": "salesforce.svg", "label": "Salesforce" },
-                        { "img": "angular.svg", "label": "AngularJS" },
-                        { "img": "qa.svg", "label": "QA" },
-                        { "img": "protractor.svg", "label": "Protractor" },
-                        { "img": "karma.svg", "label": "Karma" },
-                        { "img": "webpack.svg", "label": "Webpack" }
+                        { "class": "ios", "label": "iOS", "useCustom": true },
+                        { "class": "xcode-plain", "label": "XCode" },
+                        { "class": "github-original", "label": "Github" },
+                        { "class": "nodejs-plain", "label": "NodeJS" },
+                        { "class": "git-plain", "label": "Git" },
+                        { "class": "jenkins-plain", "label": "Jenkins" },
+                        { "class": "ionic-original", "label": "Ionic" },
+                        { "class": "salesforce-plain", "label": "Salesforce" },
+                        { "class": "angularjs-plain", "label": "AngularJS" },
+                        { "class": "qa", "label": "QA", "useCustom": true },
+                        { "class": "protractor-plain", "label": "Protractor" },
+                        { "class": "karma-plain", "label": "Karma" },
+                        { "class": "webpack-plain", "label": "Webpack" }
                     ]
                 },
                 {
@@ -84,21 +85,20 @@
                     "description": "Build version 2 of direct 2 consumer as a web app to provide access in multiple devices and move the backend from Salesforce to an in-house solution.",
                     "outcome": "Migrated backend to an in-house solution and deployed the new version as one of the first teams implementing the complete backend stack in Google Cloud Platform/GCP. Built a new version of the application using Ionic v2/Angular 2+/Typescript and a new user interface. Migration allowed business to save on hundreds of accounts in Salesforce.",
                     "techStack": [
-                        { "img": "docker.svg", "label": "Docker" },
-                        { "img": "kubernetes.svg", "label": "Kubernetes" },
-                        { "img": "gcp.svg", "label": "Google Cloud Platform" },
-                        { "img": "cicd.svg", "label": "CI/CD" },
-                        { "img": "cloudsql.svg", "label": "Cloud SQL" },
-                        { "img": "nodejs.svg", "label": "NodeJS" },
-                        { "img": "git.svg", "label": "Git" },
-                        { "img": "ionic.svg", "label": "Ionic" },
-                        { "img": "github.svg", "label": "Github" },
-                        { "img": "swdevelopment.svg", "label": "Software Development" },
-                        { "img": "cypress.svg", "label": "Cypress" },
-                        { "img": "angular.svg", "label": "Angular 2" },
-                        { "img": "nestjs.svg", "label": "NestJS" },
-                        { "img": "qa.svg", "label": "QA" },
-                        { "img": "typescript.svg", "label": "Typescript" }
+                        { "class": "docker-plain", "label": "Docker" },
+                        { "class": "kubernetes-plain", "label": "Kubernetes" },
+                        { "class": "googlecloud-plain", "label": "Google Cloud Platform" },
+                        { "class": "terraform-plain", "label": "Terraform" },
+                        { "class": "cloudsql", "label": "Cloud SQL", "useCustom": true },
+                        { "class": "nodejs-plain", "label": "NodeJS" },
+                        { "class": "git-plain", "label": "Git" },
+                        { "class": "ionic-original", "label": "Ionic" },
+                        { "class": "github-original", "label": "Github" },
+                        { "class": "cypress", "label": "Cypress", "useCustom": true },
+                        { "class": "angularjs-plain", "label": "Angular 2" },
+                        { "class": "nestjs-plain", "label": "NestJS" },
+                        { "class": "qa", "label": "QA", "useCustom": true },
+                        { "class": "typescript-plain", "label": "Typescript" }
                     ]
                 },
                 {
@@ -109,13 +109,13 @@
                     "description": "Integrate route assignment and optimization system to Route4Me's optimization API.",
                     "outcome": "Added a new module and integration to the microservice handling route definition and assignment to manage route creation, optimization and assignment through the back office UI. Implementation was done using NestJS, Typescript,  GKE, Google Cloud Platform.",
                     "techStack": [
-                        { "img": "gcp.svg", "label": "Google Cloud Platform" },
-                        { "img": "typescript.svg", "label": "Typescript" },
-                        { "img": "cloudsql.svg", "label": "Cloud SQL" },
-                        { "img": "optimization.svg", "label": "Optimization" },
-                        { "img": "nestjs.svg", "label": "NestJS" },
-                        { "img": "cicd.svg", "label": "CI/CD" },
-                        { "img": "jest.svg", "label": "Jest" }
+                        { "class": "googlecloud-plain", "label": "Google Cloud Platform" },
+                        { "class": "typescript-plain", "label": "Typescript" },
+                        { "class": "cloudsql", "label": "Cloud SQL", "useCustom": true },
+                        { "class": "optimization", "label": "Optimization", "useCustom": true },
+                        { "class": "nestjs-plain", "label": "NestJS" },
+                        { "class": "cicd", "label": "CI/CD", "useCustom": true },
+                        { "class": "jest-plain", "label": "Jest" }
                     ]
                 },
                 {
@@ -126,14 +126,14 @@
                     "description": "Setup a CI/CD pipeline for a project built using Ionic v2. The CIO provided a terraform project that worked with Docker, Github, Google Cloud Platform services Container Registry, Cloud Build, GKE, Spinnaker and Secret Management. ",
                     "outcome": "Implementation of pipeline provided an easy way to adopt continuous deployment into GCP. ",
                     "techStack": [
-                        { "img": "docker.svg", "label": "Docker" },
-                        { "img": "kubernetes.svg", "label": "Kubernetes" },
-                        { "img": "gcp.svg", "label": "Google Cloud Platform" },
-                        { "img": "cicd.svg", "label": "CI/CD" },
-                        { "img": "github.svg", "label": "Github" },
-                        { "img": "terraform.svg", "label": "Terraform" },
-                        { "img": "ionic.svg", "label": "Ionic" },
-                        { "img": "spinnaker.svg", "label": "Spinnaker" }
+                        { "class": "docker-plain", "label": "Docker" },
+                        { "class": "kubernetes-plain", "label": "Kubernetes" },
+                        { "class": "googlecloud-plain", "label": "Google Cloud Platform" },
+                        { "class": "cicd", "label": "CI/CD", "useCustom": true },
+                        { "class": "github-original", "label": "Github" },
+                        { "class": "terraform-plain", "label": "Terraform" },
+                        { "class": "ionic-original", "label": "Ionic" },
+                        { "class": "spinnaker", "label": "Spinnaker", "useCustom": true }
                     ]
                 }
             ]
@@ -163,12 +163,12 @@
                     "description": "Capture marketing insights of small distributors country-wide. Build a database of marketing trends of main products sell by companies in the retail/consumer industry.",
                     "outcome": "A native android app was built to capture the insights through surveys and keep track of surveyors. The app allowed having multiple roles/permissions to have operators, supervisors and administrators. The backend was built using Java and MySQL.\n The captured data was ingested into ArcGIS and dashboards were built using MySQL and Tableau.\n In a second version of the project, the backend and application was migrated to use entirely ArcGIS to have complete compatibility with the client's infrastructure.",
                     "techStack": [
-                        { "img": "java.svg", "label": "Java" },
-                        { "img": "android.svg", "label": "Android" },
-                        { "img": "mysql.svg", "label": "MySQL" },
-                        { "img": "tableau.svg", "label": "Tableau" },
+                        { "class": "java-plain", "label": "Java" },
+                        { "class": "android-plain", "label": "Android" },
+                        { "class": "mysql-plain", "label": "MySQL" },
+                        { "class": "tableau", "label": "Tableau", "useCustom": true },
                         {
-                            "img": "androidstudio.svg",
+                            "class": "androidstudio-plain",
                             "label": "Android Studio"
                         }
                     ]
@@ -181,11 +181,11 @@
                     "description": "Track BTL marketing operations from one of the main telecommunications provider in the country. Track and provide insights on marketing efforts at point of sale's level. ",
                     "outcome": "Project was implemented in two solutions. A native android app to keep track of every BTL operator visiting each distributor, survey-capturing to build personalized dashboards and insights and route creation and assignment.\n Front office was built using AngularJS and connected to the main database in MySQL ",
                     "techStack": [
-                        { "img": "java.svg", "label": "Java" },
-                        { "img": "kotlin.svg", "label": "Kotlin" },
-                        { "img": "android.svg", "label": "Android" },
-                        { "img": "mysql.svg", "label": "MySQL" },
-                        { "img": "angular.svg", "label": "AngularJS" }
+                        { "class": "java-plain", "label": "Java" },
+                        { "class": "kotlin-plain", "label": "Kotlin" },
+                        { "class": "android-plain", "label": "Android" },
+                        { "class": "mysql-plain", "label": "MySQL" },
+                        { "class": "angularjs-plain", "label": "AngularJS" }
                     ]
                 },
                 {
@@ -196,10 +196,10 @@
                     "description": "Provide a marketplace platform with a catalog of products from one of the main telecommunications provider in the country. The users were distributions centers in all the regions where the telecom was present. ",
                     "outcome": "The e-commerce solution was bootstrapped using OpenCart and became an important sales channel for physical products (smartphones, tablets, satellite wifi hardware and others). The most outstanding features of the product included: Recommendations, similar products, inbound marketing for new products and restocked products. Sales push via email based on previous purchases when inventory was running low, this was possible as inventory of each distribution center was connected to the platform. Supported mobile access through responsive design. ",
                     "techStack": [
-                        { "img": "php.svg", "label": "PHP" },
-                        { "img": "opencart.svg", "label": "Opencart" },
-                        { "img": "bootstrap.svg", "label": "Bootstrap" },
-                        { "img": "mysql.svg", "label": "MySQL" }
+                        { "class": "php-plain", "label": "PHP" },
+                        { "class": "opencart", "label": "Opencart", "useCustom": true },
+                        { "class": "bootstrap-plain", "label": "Bootstrap" },
+                        { "class": "mysql-plain", "label": "MySQL" }
                     ]
                 }
             ]
@@ -230,13 +230,13 @@
                     "multipleReleases": true,
                     "outcome": "The integration was completed successfully, communicating both parties and enabling a portfolio of 8 main service providers having a regular userbase of thousands of users at country-level.\n To communicate both systems RabbitMQ was used as a Persistance/Queue/Message Handling interface.",
                     "techStack": [
-                        { "img": "java.svg", "label": "Java" },
-                        { "img": "api.svg", "label": "API Design" },
-                        { "img": "webservice.svg", "label": "Webservice" },
-                        { "img": "sqlserver.svg", "label": "MS SQL Server" },
-                        { "img": "git.svg", "label": "Git" },
-                        { "img": "gitlab.svg", "label": "Gitlab" },
-                        { "img": "rabbitmq.svg", "label": "RabbitMQ" }
+                        { "class": "java-plain", "label": "Java" },
+                        { "class": "api", "label": "API Design", "useCustom": true },
+                        { "class": "webservice", "label": "Webservice", "useCustom": true },
+                        { "class": "microsoftsqlserver-plain", "label": "MS SQL Server" },
+                        { "class": "git-plain", "label": "Git" },
+                        { "class": "gitlab-plain", "label": "Gitlab" },
+                        { "class": "rabbitmq", "label": "RabbitMQ", "useCustom": true }
                     ]
                 },
                 {
@@ -247,13 +247,13 @@
                     "multipleReleases": true,
                     "outcome": "Provided real-time service to users in Central America and the US. Attended a userbase of tens of thousands of top-up purchases daily with a customer service of 4 operators.",
                     "techStack": [
-                        { "img": "php.svg", "label": "PHP" },
-                        { "img": "jquery.svg", "label": "jQuery" },
-                        { "img": "bootstrap.svg", "label": "Bootstrap" },
-                        { "img": "yii.svg", "label": "Yii 2 Framework" },
-                        { "img": "sqlserver.svg", "label": "MS SQL Server" },
-                        { "img": "git.svg", "label": "Git" },
-                        { "img": "gitlab.svg", "label": "Gitlab" }
+                        { "class": "php-plain", "label": "PHP" },
+                        { "class": "jquery-plain", "label": "jQuery" },
+                        { "class": "bootstrap-plain", "label": "Bootstrap" },
+                        { "class": "yii-plain", "label": "Yii 2 Framework" },
+                        { "class": "microsoftsqlserver-plain", "label": "MS SQL Server" },
+                        { "class": "git-plain", "label": "Git" },
+                        { "class": "gitlab-plain", "label": "Gitlab" }
                     ]
                 },
                 {
@@ -264,13 +264,14 @@
                     "description": "Design and development of a SMS broker to deliver messages through one of the main telecommunications provider's SMPP network. Admin page built using AngularJS. ",
                     "outcome": "Project built using Python/Tornado Server as the middleware to received and processed SMS messages. Persistance and handling of messages was implemented using MS SQL Server.",
                     "techStack": [
-                        { "img": "python.svg", "label": "Python" },
-                        { "img": "sqlserver.svg", "label": "MS SQL Server" },
+                        { "class": "python-plain", "label": "Python" },
+                        { "class": "microsoftsqlserver-plain", "label": "MS SQL Server" },
                         {
-                            "img": "tornado.svg",
-                            "label": "Tornado Server (Python)"
+                            "class": "tornado",
+                            "label": "Tornado Server (Python)",
+                            "useCustom": true
                         },
-                        { "img": "angular.svg", "label": "Angular" }
+                        { "class": "angularjs-plain", "label": "Angular" }
                     ]
                 }
             ]
@@ -285,14 +286,14 @@
             "startDate": "2014-11-01T00:00:00Z",
             "endDate": "2015-06-01T00:00:00Z",
             "techStack": [
-                { "img": "d3.svg", "label": "D3.js" },
-                { "img": "ios.svg", "label": "iOS" },
-                { "img": "xcode.svg", "label": "XCode" },
-                { "img": "android.svg", "label": "Android" },
-                { "img": "androidstudio.svg", "label": "Android Studio" },
-                { "img": "sqlite.svg", "label": "SQLite" },
-                { "img": "ionic.svg", "label": "Ionic" },
-                { "img": "angular.svg", "label": "AngularJS" }
+                { "class": "d3js-plain", "label": "D3.js" },
+                { "class": "ios", "label": "iOS" },
+                { "class": "xcode-plain", "label": "XCode" },
+                { "class": "android-plain", "label": "Android" },
+                { "class": "androidstudio-plain", "label": "Android Studio" },
+                { "class": "sqlite", "label": "SQLite" },
+                { "class": "ionic-original", "label": "Ionic" },
+                { "class": "angularjs-plain", "label": "AngularJS" }
             ]
         },
         {
@@ -303,14 +304,14 @@
             "multipleReleases": true,
             "description": "Android app that kept track of habits and enable reminders creation. Design was provided. App was built using Material UI, Ionic v1, AngularJS, Sqlite for iOS and Android.",
             "techStack": [
-                { "img": "ios.svg", "label": "iOS" },
-                { "img": "xcode.svg", "label": "XCode" },
-                { "img": "android.svg", "label": "Android" },
-                { "img": "androidstudio.svg", "label": "Android Studio" },
-                { "img": "sqlite.svg", "label": "SQLite" },
-                { "img": "ionic.svg", "label": "Ionic" },
-                { "img": "angular.svg", "label": "AngularJS" },
-                { "img": "materialui.svg", "label": "Material UI" }
+                { "class": "ios", "label": "iOS" },
+                { "class": "xcode-plain", "label": "XCode" },
+                { "class": "android-plain", "label": "Android" },
+                { "class": "androidstudio-plain", "label": "Android Studio" },
+                { "class": "sqlite", "label": "SQLite" },
+                { "class": "ionic-original", "label": "Ionic" },
+                { "class": "angularjs-plain", "label": "AngularJS" },
+                { "class": "materialui", "label": "Material UI" }
             ]
         },
         {
@@ -321,12 +322,12 @@
             "multipleReleases": false,
             "description": "",
             "techStack": [
-                { "img": "python.svg", "label": "Python" },
-                { "img": "serverless.svg", "label": "Serverless" },
-                { "img": "aws.svg", "label": "AWS" },
-                { "img": "awscdk.svg", "label": "AWS Cloud Formation Kit" },
-                { "img": "github.svg", "label": "Github" },
-                { "img": "githubactions.svg", "label": "Github Actions" }
+                { "class": "python-plain", "label": "Python" },
+                { "class": "serverless", "label": "Serverless" },
+                { "class": "aws", "label": "AWS" },
+                { "class": "awscdk", "label": "AWS Cloud Formation Kit" },
+                { "class": "github-original", "label": "Github" },
+                { "class": "githubactions", "label": "Github Actions" }
             ]
         },
         {
@@ -337,11 +338,11 @@
             "multipleReleases": false,
             "description": "",
             "techStack": [
-                { "img": "meteor.svg", "label": "Meteor" },
-                { "img": "heroku.svg", "label": "Heroku" },
-                { "img": "css.svg", "label": "CSS" },
-                { "img": "javascript.svg", "label": "Javascript" },
-                { "img": "html.svg", "label": "HTML" }
+                { "class": "meteor", "label": "Meteor" },
+                { "class": "heroku", "label": "Heroku" },
+                { "class": "css", "label": "CSS" },
+                { "class": "javascript-plain", "label": "Javascript" },
+                { "class": "html", "label": "HTML" }
             ]
         }
     ]
