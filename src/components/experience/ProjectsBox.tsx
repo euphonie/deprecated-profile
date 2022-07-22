@@ -49,7 +49,10 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                 <SplitscreenOutlinedIcon />
                 {t('projects.title')}
             </Typography>
-            <Box component="div" sx={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Box
+                component="div"
+                sx={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
+            >
                 {props.job.projects.map((project: JobProject, i: number) => {
                     return (
                         <Button
@@ -84,54 +87,65 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
             >
                 <Grid container>
                     <Grid item xs={12} sm={12} md={8} p={2}>
-                        <Typography variant="overline" textAlign={isMobile ? 'center' : 'inherit'}>
+                        <Typography
+                            variant="overline"
+                            textAlign={isMobile ? 'center' : 'inherit'}
+                        >
                             <span>{`${moment(activeProject?.startDate).format(
                                 'MM/YYYY'
                             )} - ${moment(activeProject?.endDate).format(
                                 'MM/YYYY'
                             )}`}</span>
                         </Typography>
-                        {
-                            activeProject?.multipleReleases ?
-                                <Typography
-                                    sx={{
-                                        fontStyle: 'italic',
-                                        alignItems: 'right',
-                                        backgroundColor: 'fadedAccent.main',
-                                        borderRadius: '5px',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        flexDirection: 'row',
-                                        gap: '1rem',
-                                    }}
-                                >
-                                    {t('projects.dialog.multipleReleasesLabel')}
-                                    <Replay30Icon />
-                                </Typography>
-                                : null
-                        }
-                        <Typography sx={{fontSize: '0.8rem'}}>
+                        {activeProject?.multipleReleases ? (
+                            <Typography
+                                sx={{
+                                    fontStyle: 'italic',
+                                    alignItems: 'right',
+                                    backgroundColor: 'fadedAccent.main',
+                                    borderRadius: '5px',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    flexDirection: 'row',
+                                    gap: '1rem',
+                                }}
+                            >
+                                {t('projects.dialog.multipleReleasesLabel')}
+                                <Replay30Icon />
+                            </Typography>
+                        ) : null}
+                        <Typography sx={{ fontSize: '0.8rem' }}>
                             {activeProject?.description ?? ''}
                         </Typography>
-                        <Typography variant="h5" sx={{fontSize: isMobile ? '0.8rem' : 'inherit', marginTop: '10px'}}>
+                        <Typography
+                            variant="h5"
+                            sx={{
+                                fontSize: isMobile ? '0.8rem' : 'inherit',
+                                marginTop: '10px',
+                            }}
+                        >
                             {t('projects.dialog.outcomeLabel')}
                         </Typography>
-                        <Typography sx={{fontSize: '0.8rem'}}>
-                            <List dense disablePadding>
-                                {
-                                    activeProject?.outcomes.map((outcome: string, i: number) => {
-                                        return(
-                                            <ListItem key={i}>
-                                                <ListItemIcon>
-                                                    <AssignmentTurnedInIcon color="white" />
-                                                </ListItemIcon>
-                                                <ListItemText>{outcome}</ListItemText>
-                                            </ListItem>
-                                        )
-                                    })
+                        <List dense disablePadding>
+                            {activeProject?.outcomes.map(
+                                (outcome: string, i: number) => {
+                                    return (
+                                        <ListItem key={i}>
+                                            <ListItemIcon>
+                                                <AssignmentTurnedInIcon color="white" />
+                                            </ListItemIcon>
+                                            <ListItemText>
+                                                <Typography
+                                                    sx={{ fontSize: '0.8rem' }}
+                                                >
+                                                    {outcome}
+                                                </Typography>
+                                            </ListItemText>
+                                        </ListItem>
+                                    );
                                 }
-                            </List>
-                        </Typography>
+                            )}
+                        </List>
                     </Grid>
                     <Grid item xs={12} sm={12} md={4} p={2}>
                         <TechStackBox
