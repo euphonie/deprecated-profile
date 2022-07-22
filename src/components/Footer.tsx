@@ -21,6 +21,13 @@ const bottomAppBar = {
     backgroundSize: 'cover',
 };
 
+const shouldApplyFixedPosition = (page: string) => {
+    return [
+        '/contact',
+        '/about'
+    ].indexOf(page) !== -1;
+};
+
 export const Footer = ({ showSocial }: { showSocial: boolean }) => {
     const { t } = useTranslation();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -30,7 +37,7 @@ export const Footer = ({ showSocial }: { showSocial: boolean }) => {
             <AppBar
                 color="secondary"
                 position={
-                    window.location.pathname === '/contact'
+                    shouldApplyFixedPosition(window.location.pathname)
                         ? 'fixed'
                         : 'relative'
                 }

@@ -34,7 +34,7 @@ const pages = [
         key: 3,
         title: 'about',
         anchor: 'about',
-        scrollTo: true
+        scrollTo: false
     },
     {
         key: 4,
@@ -72,6 +72,7 @@ export const NavBar = () => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Box
+                            component="div"
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'left'
@@ -84,6 +85,7 @@ export const NavBar = () => {
                             </Link>
                         </Box>
                         <Box
+                            component="div"
                             sx={{
                                 flexGrow: 1,
                                 display: { xs: 'flex', md: 'none' },
@@ -134,6 +136,7 @@ export const NavBar = () => {
                             </Menu>
                         </Box>
                         <Box
+                            component="div"
                             sx={{
                                 flexGrow: 1,
                                 display: { md: 'flex', xs: 'none' },
