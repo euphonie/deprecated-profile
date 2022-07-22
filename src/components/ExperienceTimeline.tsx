@@ -31,7 +31,7 @@ export default function ExperienceTimeline() {
             <Typography sx={{ textAlign: 'center' }} variant="h5">
                 {t('mywork.journey.title')}
             </Typography>
-            <Box m={2}>
+            <Box component="div" m={2}>
                 {mywork.work.map((job: Job, i: number) => {
                     const sDate = moment(job.startDate);
                     const eDate = moment(job.endDate);

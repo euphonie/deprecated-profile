@@ -85,7 +85,9 @@ export const Contact = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <Box paddingBottom="15rem" sx={{backgroundImage: `url(${stackedBG})`, backgroundSize: 'cover'}}>
+            <Box 
+                component="div"
+                paddingBottom="15rem" sx={{backgroundImage: `url(${stackedBG})`, backgroundSize: 'cover'}}>
                 <Snackbar
                     anchorOrigin={{ vertical, horizontal }}
                     open={open}
@@ -106,6 +108,7 @@ export const Contact = () => {
                     }}
                 >
                     <Box
+                        component="div"
                         sx={{
                             height: '100%',
                             width: '100%',
@@ -143,6 +146,7 @@ export const Contact = () => {
                                 }}
                             >
                                 <Box
+                                    component="div"
                                     sx={{
                                         height: '100%',
                                         width: '100%',
