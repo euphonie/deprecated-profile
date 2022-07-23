@@ -19,12 +19,6 @@ import { Link } from 'react-router-dom';
 
 const pages = [
     {
-        key: 1,
-        title: 'experience',
-        anchor: 'experience',
-        scrollTo: true
-    },
-    {
         key: 2,
         title: 'work',
         anchor: 'work',
@@ -62,11 +56,7 @@ export const NavBar = () => {
     return (
         <ThemeProvider theme={theme}>
             <AppBar
-                color={
-                    window.location.pathname === '/contact'
-                        ? 'primary'
-                        : 'fadedPrimary'
-                }
+                sx={{backgroundColor: 'fadedPrimary.main'}}
                 position="sticky"
             >
                 <Container maxWidth="xl">
@@ -78,7 +68,7 @@ export const NavBar = () => {
                                 justifyContent: 'left'
                             }}
                         >
-                            <Link to="/" reloadDocument={true}>
+                            <Link to="/">
                                 <IconButton size="large" color="white">
                                     <HomeIcon />
                                 </IconButton>

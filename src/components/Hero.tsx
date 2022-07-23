@@ -75,23 +75,22 @@ export const Hero = () => {
                             spacing={{xs: 2, sm: 2, md: 3}}
                             alignItems="flex-end"
                         >
-                            <Button
-                                variant="contained"
-                                color="accent"
-                                size="large"
-                                disableElevation
-                                endIcon={<SendIcon color="white" />}
+                            <Link
+                                to="/contact"
+                                style={{
+                                    textDecoration: 'none',
+                                }}
                             >
-                                <Link
-                                    to="/contact"
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: 'white',
-                                    }}
+                                <Button
+                                    variant="contained"
+                                    color="accent"
+                                    size="large"
+                                    disableElevation
+                                    endIcon={<SendIcon color="primary" />}
                                 >
                                     {t('landing.cta.contact')}
-                                </Link>
-                            </Button>
+                                </Button>
+                            </Link>
                             <Button
                                 variant="contained"
                                 size="large"
