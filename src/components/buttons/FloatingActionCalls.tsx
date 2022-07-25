@@ -5,7 +5,6 @@ import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from '../../resources/theme/CustomTheme.d';
 
 import SendIcon from '@mui/icons-material/Send';
-import FaceIcon from '@mui/icons-material/Face';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 import Fab from '@mui/material/Fab/Fab';
@@ -13,6 +12,8 @@ import Fab from '@mui/material/Fab/Fab';
 const FloatingActionCalls = () => {
     const { t } = useTranslation();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+
 
     return (
         <ThemeProvider theme={theme}>
