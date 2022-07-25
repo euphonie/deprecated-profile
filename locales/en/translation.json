@@ -3,7 +3,7 @@
         "experience": "Experience",
         "work": "My Work",
         "contact": "Contact",
-        "about": "About"
+        "about": "About Me"
     },
     "landing": {
         "title": "Hi, I'm Joel",
@@ -37,11 +37,13 @@
         "title": "Projects",
         "dialog": {
             "closeLabel": "Close",
-            "descriptionLabel": "Description",
-            "outcomeLabel": "Outcome",
+            "outcomeLabel": "Outcomes",
             "techStackLabel": "Tech Stack",
             "multipleReleasesLabel": "This project consisted on multiple releases"
         }
+    },
+    "about": {
+        "title": "hola - salut - hey - ciao - hej - привет"
     },
     "footer": {
         "copyright": "© 2022 Joel Cantoral"
