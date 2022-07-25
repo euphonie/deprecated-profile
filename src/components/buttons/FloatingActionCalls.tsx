@@ -5,7 +5,6 @@ import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from '../../resources/theme/CustomTheme.d';
 
 import SendIcon from '@mui/icons-material/Send';
-import FaceIcon from '@mui/icons-material/Face';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 import Fab from '@mui/material/Fab/Fab';

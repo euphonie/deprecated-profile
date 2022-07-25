@@ -67,7 +67,6 @@
     "@testing-library/dom": "^8.14.0",
     "@types/d3": "^7.4.0",
     "@types/lodash": "^4.14.182",
-    "@types/react-scroll": "^1.8.3",
     "@types/three": "^0.141.0",
     "gltfjsx": "^4.6.4"
   }
