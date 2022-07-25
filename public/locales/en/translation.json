@@ -42,6 +42,9 @@
             "multipleReleasesLabel": "This project consisted on multiple releases"
         }
     },
+    "about": {
+        "title": "hola - salut - hey - ciao - hej - привет"
+    },
     "footer": {
         "copyright": "© 2022 Joel Cantoral"
     }

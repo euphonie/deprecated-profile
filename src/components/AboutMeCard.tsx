@@ -14,6 +14,7 @@ import theme from '../resources/theme/CustomTheme.d';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import aboutme from '../config/aboutme.json';
+import { useTranslation } from 'react-i18next';
 
 
 interface AboutMeInfo {
@@ -25,6 +26,7 @@ interface AboutMeInfo {
 }
 
 const AboutMeCard = () => {
+    const { t } = useTranslation();
     const aboutMeInfo:AboutMeInfo = aboutme;
     return (
         <ThemeProvider theme={theme}>
@@ -37,7 +39,7 @@ const AboutMeCard = () => {
                         gap: '2rem'
                     }}
                 >
-                    <Typography variant="h3" textAlign="center">hola - salut - hey - ciao - hej - привет</Typography>
+                    <Typography variant="h3" textAlign="center">{ t('about.title') }</Typography>
                     <code>{ aboutMeInfo.whatILike }</code>
                     <code>{ aboutMeInfo.whatHaveIDoneTitle }</code>
                     <List>

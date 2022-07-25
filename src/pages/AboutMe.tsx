@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container/Container';
 import Grid from '@mui/material/Grid/Grid';
-import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { AboutMeScene } from '../components/models/AboutMeScene';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from '../resources/theme/CustomTheme.d';
 import AboutMeCard from '../components/AboutMeCard';
 
