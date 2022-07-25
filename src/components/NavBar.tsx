@@ -11,7 +11,6 @@ import theme from '../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import AppBar from '@mui/material/AppBar/AppBar';
 
-import * as Scroll from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import HomeIcon from '@mui/icons-material/Home';
 import { SocialIconBox } from './SocialIconBox';
@@ -20,27 +19,13 @@ import { Link } from 'react-router-dom';
 const pages = [
     {
         key: 1,
-        title: 'experience',
-        anchor: 'experience',
-        scrollTo: true
+        title: 'about',
+        anchor: 'about'
     },
     {
         key: 2,
-        title: 'work',
-        anchor: 'work',
-        scrollTo: true
-    },
-    {
-        key: 3,
-        title: 'about',
-        anchor: 'about',
-        scrollTo: true
-    },
-    {
-        key: 4,
         title: 'contact',
-        anchor: '/contact',
-        scrollTo: false
+        anchor: '/contact'
     },
 ];
 
@@ -62,28 +47,26 @@ export const NavBar = () => {
     return (
         <ThemeProvider theme={theme}>
             <AppBar
-                color={
-                    window.location.pathname === '/contact'
-                        ? 'primary'
-                        : 'fadedPrimary'
-                }
+                sx={{backgroundColor: 'fadedPrimary.main'}}
                 position="sticky"
             >
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Box
+                            component="div"
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'left'
                             }}
                         >
-                            <Link to="/" reloadDocument={true}>
+                            <Link to="/">
                                 <IconButton size="large" color="white">
                                     <HomeIcon />
                                 </IconButton>
                             </Link>
                         </Box>
                         <Box
+                            component="div"
                             sx={{
                                 flexGrow: 1,
                                 display: { xs: 'flex', md: 'none' },
@@ -118,41 +101,29 @@ export const NavBar = () => {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <Scroll.Link
+                                    <Link
                                         key={page.title}
                                         to={page.anchor}
                                         style={{ textDecoration: 'none', color: 'primary' }}
-                                        spy={true} hashSpy={true} smooth={true} duration={500} 
                                     >
                                         <MenuItem onClick={handleCloseNavMenu}>
                                             <Typography textAlign="center">
                                                 {t(`menu.${page.title}`)}
                                             </Typography>
                                         </MenuItem>
-                                    </Scroll.Link>
+                                    </Link>
                                 ))}
                             </Menu>
                         </Box>
                         <Box
+                            component="div"
                             sx={{
                                 flexGrow: 1,
                                 display: { md: 'flex', xs: 'none' },
                             }}
                         >
                             {pages.map((page) => (
-                                page.scrollTo ? <Scroll.Link
-                                    key={page.title}
-                                    to={page.anchor}
-                                    style={{ textDecoration: 'none',  color:"white" }}
-                                    spy={true} hashSpy={true} smooth={true} offset={-50} duration={500} 
-                                >
-                                    <MenuItem>
-                                        <Typography>
-                                            {t(`menu.${page.title}`)}
-                                        </Typography>
-                                    </MenuItem>
-                                </Scroll.Link>
-                                : <Link
+                                <Link
                                     key={page.title}
                                     to={page.anchor}
                                     replace={true}
@@ -166,7 +137,7 @@ export const NavBar = () => {
                                 </Link>
                             ))}
                         </Box>
-                        <SocialIconBox />
+                        <SocialIconBox showComplete={false}/>
                     </Toolbar>
                 </Container>
             </AppBar>

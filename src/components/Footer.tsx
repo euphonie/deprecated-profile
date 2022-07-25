@@ -8,17 +8,10 @@ import Typography from '@mui/material/Typography/Typography';
 import MenuItem from '@mui/material/MenuItem/MenuItem';
 import { useTranslation } from 'react-i18next';
 import { SocialIconBox } from './SocialIconBox';
-import footerBG from '../resources/img/low-poly-grid-haikei.webp';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 
-const bottomAppBar = {
-    top: 'auto',
-    bottom: 0,
-    left: 0,
-    width: '100%',
-    padding: '10px',
-    backgroundImage: `url(${footerBG})`,
-    backgroundSize: 'cover',
+const shouldApplyFixedPosition = (page: string) => {
+    return ['/contact', '/about'].indexOf(page) !== -1;
 };
 
 export const Footer = ({ showSocial }: { showSocial: boolean }) => {
@@ -28,13 +21,19 @@ export const Footer = ({ showSocial }: { showSocial: boolean }) => {
     return (
         <ThemeProvider theme={theme}>
             <AppBar
-                color="secondary"
+                color="footer"
                 position={
-                    window.location.pathname === '/contact'
+                    shouldApplyFixedPosition(window.location.pathname)
                         ? 'fixed'
                         : 'relative'
                 }
-                style={bottomAppBar}
+                sx={{
+                    top: 'auto',
+                    bottom: 0,
+                    left: 0,
+                    width: '100%',
+                    padding: '10px',
+                }}
             >
                 <AnimateWhenVisible animation="fadeTop">
                     <Toolbar
@@ -44,7 +43,7 @@ export const Footer = ({ showSocial }: { showSocial: boolean }) => {
                             padding: '10px',
                             justifyContent: 'space-around',
                             flexDirection: isMobile ? 'column' : 'row',
-                            gap: '1rem'
+                            gap: '1rem',
                         }}
                     >
                         <img
@@ -55,7 +54,7 @@ export const Footer = ({ showSocial }: { showSocial: boolean }) => {
                             loading="lazy"
                         />
                         <div style={{ display: showSocial ? 'block' : 'none' }}>
-                            <SocialIconBox />
+                            <SocialIconBox showComplete={false} />
                         </div>
                         <MenuItem>
                             <Typography variant="body2">

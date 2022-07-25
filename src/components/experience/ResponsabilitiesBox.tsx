@@ -13,7 +13,7 @@ export const ResponsabilitiesBox = (props: ResponsabilitiesBoxProps) => {
     const { t } = useTranslation();
 
     return (
-        <Box>
+        <Box component="div">
             <Typography
                 textAlign="left"
                 variant="h6"

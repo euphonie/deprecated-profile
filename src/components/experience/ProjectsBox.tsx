@@ -8,10 +8,15 @@ import { useState } from 'react';
 import { ProjectsDialog } from '../dialogs/ProjectsDialog';
 import moment from 'moment';
 import { TechStackBox } from './TechStackBox';
-import Divider from '@mui/material/Divider/Divider';
 import Replay30Icon from '@mui/icons-material/Replay30';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 import theme from '../../resources/theme/CustomTheme.d';
+import Grid from '@mui/material/Grid/Grid';
+import ListItem from '@mui/material/ListItem/ListItem';
+import ListItemText from '@mui/material/ListItemText/ListItemText';
+import List from '@mui/material/List/List';
+import ListItemIcon from '@mui/material/ListItemIcon/ListItemIcon';
+import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 
 export const ProjectsBox = (props: ProjectBoxProps) => {
     const { t } = useTranslation();
@@ -30,7 +35,7 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
     };
 
     return (
-        <Box>
+        <Box component="div">
             <Typography
                 variant="h6"
                 textAlign="left"
@@ -44,7 +49,10 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                 <SplitscreenOutlinedIcon />
                 {t('projects.title')}
             </Typography>
-            <Box sx={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Box
+                component="div"
+                sx={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
+            >
                 {props.job.projects.map((project: JobProject, i: number) => {
                     return (
                         <Button
@@ -77,54 +85,75 @@ export const ProjectsBox = (props: ProjectBoxProps) => {
                 activeProject={activeProject}
                 handleClose={handleProjectModalClose}
             >
-                <Typography variant="overline" textAlign={isMobile ? 'center' : 'inherit'}>
-                    <span>{`${moment(activeProject?.startDate).format(
-                        'MM/YYYY'
-                    )} - ${moment(activeProject?.endDate).format(
-                        'MM/YYYY'
-                    )}`}</span>
-                </Typography>
-                {
-                activeProject?.multipleReleases ?
+                <Grid container>
+                    <Grid item xs={12} sm={12} md={8} p={2}>
                         <Typography
+                            variant="overline"
+                            textAlign={isMobile ? 'center' : 'inherit'}
+                        >
+                            <span>{`${moment(activeProject?.startDate).format(
+                                'MM/YYYY'
+                            )} - ${moment(activeProject?.endDate).format(
+                                'MM/YYYY'
+                            )}`}</span>
+                        </Typography>
+                        {activeProject?.multipleReleases ? (
+                            <Typography
+                                sx={{
+                                    fontStyle: 'italic',
+                                    alignItems: 'right',
+                                    backgroundColor: 'fadedAccent.main',
+                                    borderRadius: '5px',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    flexDirection: 'row',
+                                    gap: '1rem',
+                                }}
+                            >
+                                {t('projects.dialog.multipleReleasesLabel')}
+                                <Replay30Icon />
+                            </Typography>
+                        ) : null}
+                        <Typography sx={{ fontSize: '0.8rem' }}>
+                            {activeProject?.description ?? ''}
+                        </Typography>
+                        <Typography
+                            variant="h5"
                             sx={{
-                                fontStyle: 'italic',
-                                alignItems: 'right',
-                                backgroundColor: 'fadedAccent.main',
-                                borderRadius: '5px',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                flexDirection: 'row',
-                                gap: '1rem',
+                                fontSize: isMobile ? '0.8rem' : 'inherit',
+                                marginTop: '10px',
                             }}
                         >
-                            {t('projects.dialog.multipleReleasesLabel')}
-                            <Replay30Icon />
+                            {t('projects.dialog.outcomeLabel')}
                         </Typography>
-                        : null
-                }
-                <Divider />
-                <Typography variant="h6" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
-                    {t('projects.dialog.descriptionLabel')}
-                </Typography>
-                <Typography variant="body1" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
-                    {activeProject?.description ?? ''}
-                </Typography>
-                <Divider />
-                <Typography variant="h6" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
-                    {t('projects.dialog.outcomeLabel')}
-                </Typography>
-                <Typography variant="body1" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
-                    {activeProject?.outcome ?? ''}
-                </Typography>
-                <Divider />
-                <Typography variant="h6" sx={{fontSize: isMobile ? '0.8rem' : 'inherit'}}>
-                    {t('projects.dialog.techStackLabel')}
-                </Typography>
-                <TechStackBox
-                    showComplete={true}
-                    technologies={activeProject?.techStack ?? []}
-                />
+                        <List dense disablePadding>
+                            {activeProject?.outcomes.map(
+                                (outcome: string, i: number) => {
+                                    return (
+                                        <ListItem key={i}>
+                                            <ListItemIcon>
+                                                <AssignmentTurnedInIcon color="white" />
+                                            </ListItemIcon>
+                                            <ListItemText>
+                                                <Typography
+                                                    sx={{ fontSize: '0.8rem' }}
+                                                >
+                                                    {outcome}
+                                                </Typography>
+                                            </ListItemText>
+                                        </ListItem>
+                                    );
+                                }
+                            )}
+                        </List>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={4} p={2}>
+                        <TechStackBox
+                            showComplete={true}
+                            technologies={activeProject?.techStack ?? []}
+                        />
+                    </Grid>
+                </Grid>
             </ProjectsDialog>
         </Box>
     );

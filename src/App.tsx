@@ -7,6 +7,8 @@ import { Contact } from './pages/Contact';
 import CssBaseline from '@mui/material/CssBaseline/CssBaseline';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from './resources/theme/CustomTheme.d';
+import { AboutMe } from './pages/AboutMe';
+import FloatingActionCalls from './components/buttons/FloatingActionCalls';
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
             <NavBar></NavBar>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutMe />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
+            <FloatingActionCalls />
           </ThemeProvider>
         </BrowserRouter>
     </React.StrictMode>

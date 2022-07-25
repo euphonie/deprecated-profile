@@ -8,12 +8,13 @@ import theme from '../resources/theme/CustomTheme.d';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { AnimateWhenVisible } from './animations/AnimateWhenVisible';
 import SendIcon from '@mui/icons-material/Send';
-import FaceIcon from '@mui/icons-material/Face';
 import { Link } from 'react-router-dom';
 
 import BG from '../resources/img/bg-min.webp';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
-import Stack from '@mui/material/Stack/Stack';
+
+import bottomHero from '../resources/img/bottom-hero.webp';
+import Box from '@mui/material/Box/Box';
 
 const Heading = styled(Typography)<{ fontSize?: string }>`
     color: white;
@@ -38,7 +39,7 @@ export const Hero = () => {
                     height: '55rem',
                     top: '0',
                     left: '0',
-                    backgroundImage: `url(${BG})`,
+                    backgroundImage: `url(${bottomHero}), url(${BG})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
@@ -68,37 +69,27 @@ export const Hero = () => {
                     </AnimateWhenVisible>
 
                     <AnimateWhenVisible animation="fadeTop">
-                        <Stack
-                            direction={{ xs: 'column', sm: 'column', md: 'column'}}
-                            spacing={{xs: 2, sm: 2, md: 3}}
-                            alignItems="flex-end"
+                        <Box
+                            component="div"
+                            sx={{
+                                display: isMobile ? 'none' : 'flex',
+                                flexDirection: 'row',
+                                justifyContent: 'flex-end',
+                            }}
                         >
                             <Button
+                                component={Link}
+                                to="/contact"
                                 variant="contained"
                                 color="accent"
                                 size="large"
                                 disableElevation
-                                endIcon={<SendIcon color="white" />}
+                                sx={{textDecoration: 'none', margin: '5px'}}
+                                endIcon={<SendIcon color="primary" />}
                             >
-                                <Link
-                                    to="/contact"
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: 'white',
-                                    }}
-                                >
-                                    {t('landing.cta.contact')}
-                                </Link>
+                                {t('landing.cta.contact')}
                             </Button>
-                            <Button
-                                variant="contained"
-                                size="large"
-                                disableElevation
-                                endIcon={<FaceIcon />}
-                            >
-                                {t('landing.cta.work')}
-                            </Button>
-                        </Stack>
+                        </Box>
                     </AnimateWhenVisible>
                 </Grid>
             </Grid>

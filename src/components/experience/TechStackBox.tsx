@@ -15,10 +15,29 @@ export const TechStackBox = (props: TechStackBoxProps) => {
         technologies = [
             ...props.technologies.slice(0, 5), 
             {
-                "img": 'more.svg',
-                "label": 'See others'
+                "class": 'more',
+                "label": 'See others',
+                "useCustom": true
             }
         ];
+    }
+
+    const renderIcon = (techOption: TechStackOption) => {
+        if (techOption.useCustom){
+            const imgExtension = 'svg';
+            return <img
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    color: 'white'
+                }}
+                src={`/tech/${techOption.class}.${imgExtension}`}
+                alt={techOption.label}
+                loading="lazy"
+            />;
+        } else {
+            return <i className={`devicon-${techOption.class} colored`}></i>;
+        }
     }
 
     return (
@@ -37,23 +56,14 @@ export const TechStackBox = (props: TechStackBoxProps) => {
                                 flexDirection: 'column',
                                 marginTop: '0',
                                 alignItems: 'center',
-                                backgroundColor: props.showComplete ? 'fadedAccent.main' : 'transparent',
+                                backgroundColor: props.showComplete ? 'white.main' : 'transparent',
                                 borderRadius: '4px',
                                 padding: '4px',
                                 flexGrow: '1'
                             }}
                         >
-                            <Icon sx={{fontSize: isMobile ?  '1.5rem' : '2.5rem', overflow: 'revert'}}>
-                                <img
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        color: 'white'
-                                    }}
-                                    src={`/tech/${tech.img}`}
-                                    alt={tech.label}
-                                    loading="lazy"
-                                />
+                            <Icon sx={{fontSize: isMobile ?  '1.5rem' : '2rem', overflow: 'revert'}}>
+                                { renderIcon(tech) }
                             </Icon>
                             {
                                 props.showComplete ? 
