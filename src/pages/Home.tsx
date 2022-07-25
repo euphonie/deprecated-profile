@@ -5,6 +5,7 @@ import { Hero } from '../components/Hero';
 
 import * as Scroll from 'react-scroll';
 import Skeleton from '@mui/material/Skeleton/Skeleton';
+import { AboutMe } from './AboutMe';
 const MyWork = React.lazy(() => import('./MyWork'));
 
 export const Home = () => {
@@ -17,6 +18,11 @@ export const Home = () => {
                 <Scroll.Element name="experience">
                     <Suspense fallback={ <Skeleton variant="rectangular" width={210} height={118} /> }>
                         <MyWork/>
+                    </Suspense>
+                </Scroll.Element>
+                <Scroll.Element name="aboutme">
+                    <Suspense fallback={ <Skeleton variant="rectangular" width={210} height={118} /> }>
+                        <AboutMe/>
                     </Suspense>
                 </Scroll.Element>
             </Container>
