@@ -137,7 +137,7 @@ export const NavBar = () => {
                                 </Link>
                             ))}
                         </Box>
-                        <SocialIconBox />
+                        <SocialIconBox showComplete={false}/>
                     </Toolbar>
                 </Container>
             </AppBar>

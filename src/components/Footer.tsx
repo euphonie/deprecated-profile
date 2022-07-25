@@ -54,7 +54,7 @@ export const Footer = ({ showSocial }: { showSocial: boolean }) => {
                             loading="lazy"
                         />
                         <div style={{ display: showSocial ? 'block' : 'none' }}>
-                            <SocialIconBox />
+                            <SocialIconBox showComplete={false} />
                         </div>
                         <MenuItem>
                             <Typography variant="body2">
