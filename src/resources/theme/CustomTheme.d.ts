@@ -48,6 +48,14 @@ declare module '@mui/material/Box/Box' {
     }
 }
 
+declare module '@mui/material/Fab/Fab' {
+    interface FabPropsColorOverrides {
+        white: true;
+        accent: true;
+        silver: true;
+    }
+}
+
 /*
 {"Silver Metallic":"a7a2a9","Raisin Black":"242535","Jet":"323444","Maximum Yellow Red":"e9b44c","Alice Blue":"ebf2fa"}
 */
