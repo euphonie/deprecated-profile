@@ -15,6 +15,7 @@ const createColor = (mainColor: string, alphaValue?: number) =>
 declare module '@mui/material/AppBar/AppBar'  {
     interface AppBarPropsColorOverrides {
         fadedPrimary: true;
+        footer: true;
     }
 }
 
@@ -55,6 +56,7 @@ export default createTheme({
     palette: {
         primary: createColor("#323444"),
         secondary: createColor("#242535"),
+        footer: createColor('#00101d'),
         accent: createColor("#E9B44C"),
         silver: createColor("#a7a2a9"),
         fadedAccent: createColor('#E9B44C', 0.6),
